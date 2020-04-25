@@ -27,6 +27,8 @@ class ViewController: NSViewController, MTKViewDelegate {
         self.view.addSubview(mtkView)
         
         mtkView.delegate = self
+        
+        Test.run()
     }
 
     override var representedObject: Any? {

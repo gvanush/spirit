@@ -11,6 +11,20 @@
 		B7671EDA244D85F20075D52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED9244D85F20075D52C /* ViewController.swift */; };
 		B7671EDC244D85F30075D52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDB244D85F30075D52C /* Assets.xcassets */; };
 		B7671EDF244D85F30075D52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDD244D85F30075D52C /* Main.storyboard */; };
+		B7671EEF2450C4320075D52C /* Ref.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671EEC2450C4320075D52C /* Ref.mm */; };
+		B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */; };
+		B7671EF42450C54C0075D52C /* RenderPassDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */; };
+		B7671EF82450D1960075D52C /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671EF62450D1960075D52C /* Test.cpp */; };
+		B7671EFA2450D2990075D52C /* libSpirit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7671EC3244D7DC80075D52C /* libSpirit.a */; };
+		B7671EFD2452CBB80075D52C /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671EFC2452CBB80075D52C /* Test.mm */; };
+		B7671F002452CDFB0075D52C /* TestObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671EFE2452CDFB0075D52C /* TestObj.mm */; };
+		B7671F012452CDFB0075D52C /* TestObj.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671EFF2452CDFB0075D52C /* TestObj.h */; };
+		B7671F04245356F20075D52C /* TestObjCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F02245356F20075D52C /* TestObjCObject.h */; };
+		B7671F05245356F20075D52C /* TestObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B7671F03245356F20075D52C /* TestObjCObject.m */; };
+		B7671F0E2454A2210075D52C /* Equatable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F0C2454A2210075D52C /* Equatable.mm */; };
+		B7671F0F2454A2210075D52C /* Equatable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F0D2454A2210075D52C /* Equatable.h */; };
+		B7671F122454B6600075D52C /* Cloneable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F102454B6600075D52C /* Cloneable.mm */; };
+		B7671F132454B6600075D52C /* Cloneable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F112454B6600075D52C /* Cloneable.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +36,23 @@
 		B7671EDE244D85F30075D52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7671EE0244D85F30075D52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spirit_macOS.entitlements; sourceTree = "<group>"; };
+		B7671EEC2450C4320075D52C /* Ref.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Ref.mm; sourceTree = "<group>"; };
+		B7671EED2450C4320075D52C /* Ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ref.h; sourceTree = "<group>"; };
+		B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPassDescriptor.mm; sourceTree = "<group>"; };
+		B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPassDescriptor.h; sourceTree = "<group>"; };
+		B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spirit_macOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7671EF62450D1960075D52C /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		B7671EF72450D1960075D52C /* Test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		B7671EFB2452CBB80075D52C /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		B7671EFC2452CBB80075D52C /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
+		B7671EFE2452CDFB0075D52C /* TestObj.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestObj.mm; sourceTree = "<group>"; };
+		B7671EFF2452CDFB0075D52C /* TestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObj.h; sourceTree = "<group>"; };
+		B7671F02245356F20075D52C /* TestObjCObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObjCObject.h; sourceTree = "<group>"; };
+		B7671F03245356F20075D52C /* TestObjCObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObjCObject.m; sourceTree = "<group>"; };
+		B7671F0C2454A2210075D52C /* Equatable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Equatable.mm; sourceTree = "<group>"; };
+		B7671F0D2454A2210075D52C /* Equatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equatable.h; sourceTree = "<group>"; };
+		B7671F102454B6600075D52C /* Cloneable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Cloneable.mm; sourceTree = "<group>"; };
+		B7671F112454B6600075D52C /* Cloneable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cloneable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7671EFA2450D2990075D52C /* libSpirit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +80,7 @@
 				B7671EC5244D7DC90075D52C /* Spirit */,
 				B7671ED6244D85F20075D52C /* Spirit_macOS */,
 				B7671EC4244D7DC80075D52C /* Products */,
+				B7671EF92450D2990075D52C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +96,7 @@
 		B7671EC5244D7DC90075D52C /* Spirit */ = {
 			isa = PBXGroup;
 			children = (
+				B7671EEA2450C4320075D52C /* apple */,
 			);
 			path = Spirit;
 			sourceTree = "<group>";
@@ -76,8 +110,55 @@
 				B7671EDD244D85F30075D52C /* Main.storyboard */,
 				B7671EE0244D85F30075D52C /* Info.plist */,
 				B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */,
+				B7671EF62450D1960075D52C /* Test.cpp */,
+				B7671EF72450D1960075D52C /* Test.hpp */,
+				B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */,
+				B7671EFB2452CBB80075D52C /* Test.h */,
+				B7671EFC2452CBB80075D52C /* Test.mm */,
 			);
 			path = Spirit_macOS;
+			sourceTree = "<group>";
+		};
+		B7671EEA2450C4320075D52C /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				B7671EEB2450C4320075D52C /* core */,
+				B7671EEE2450C4320075D52C /* metal */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		B7671EEB2450C4320075D52C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				B7671EEC2450C4320075D52C /* Ref.mm */,
+				B7671EED2450C4320075D52C /* Ref.h */,
+				B7671F0C2454A2210075D52C /* Equatable.mm */,
+				B7671F0D2454A2210075D52C /* Equatable.h */,
+				B7671F102454B6600075D52C /* Cloneable.mm */,
+				B7671F112454B6600075D52C /* Cloneable.h */,
+				B7671EFE2452CDFB0075D52C /* TestObj.mm */,
+				B7671EFF2452CDFB0075D52C /* TestObj.h */,
+				B7671F02245356F20075D52C /* TestObjCObject.h */,
+				B7671F03245356F20075D52C /* TestObjCObject.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		B7671EEE2450C4320075D52C /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */,
+				B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */,
+			);
+			path = metal;
+			sourceTree = "<group>";
+		};
+		B7671EF92450D2990075D52C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +168,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7671F04245356F20075D52C /* TestObjCObject.h in Headers */,
+				B7671F132454B6600075D52C /* Cloneable.h in Headers */,
+				B7671F012452CDFB0075D52C /* TestObj.h in Headers */,
+				B7671EF42450C54C0075D52C /* RenderPassDescriptor.h in Headers */,
+				B7671F0F2454A2210075D52C /* Equatable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +228,7 @@
 					};
 					B7671ED4244D85F20075D52C = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -181,6 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7671F05245356F20075D52C /* TestObjCObject.m in Sources */,
+				B7671EEF2450C4320075D52C /* Ref.mm in Sources */,
+				B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */,
+				B7671F122454B6600075D52C /* Cloneable.mm in Sources */,
+				B7671F002452CDFB0075D52C /* TestObj.mm in Sources */,
+				B7671F0E2454A2210075D52C /* Equatable.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7671EF82450D1960075D52C /* Test.cpp in Sources */,
+				B7671EFD2452CBB80075D52C /* Test.mm in Sources */,
 				B7671EDA244D85F20075D52C /* ViewController.swift in Sources */,
 				B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */,
 			);
@@ -319,6 +414,7 @@
 		B7671ECF244D7DC90075D52C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				EXECUTABLE_PREFIX = lib;
@@ -332,6 +428,7 @@
 		B7671ED0244D7DC90075D52C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				EXECUTABLE_PREFIX = lib;
@@ -346,11 +443,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Spirit";
 				INFOPLIST_FILE = Spirit_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.herospirit.Spirit-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -368,11 +469,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Spirit";
 				INFOPLIST_FILE = Spirit_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,6 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.herospirit.Spirit-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
