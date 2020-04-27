@@ -12,6 +12,8 @@
 #include "../core/Equatable.h"
 #include "../core/Cloneable.h"
 
+#include <objc/NSObjCRuntime.h>
+
 namespace apple::metal {
 
 class RenderPassDescriptorRef: public core::Ref {

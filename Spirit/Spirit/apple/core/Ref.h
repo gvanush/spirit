@@ -32,12 +32,8 @@ public:
     explicit Ref(CFTypeRef handle);
     
     template <typename T>
-    T* ptr() const {
-        return (__bridge T*) _handle;
-    }
-    
-    id objcHandle() const {
-        return (__bridge id) _handle;
+    T obj() const {
+        return (__bridge T) _handle;
     }
     
     CFTypeRef handle() const {

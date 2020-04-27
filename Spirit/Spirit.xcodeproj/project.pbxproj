@@ -25,6 +25,24 @@
 		B7671F0F2454A2210075D52C /* Equatable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F0D2454A2210075D52C /* Equatable.h */; };
 		B7671F122454B6600075D52C /* Cloneable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F102454B6600075D52C /* Cloneable.mm */; };
 		B7671F132454B6600075D52C /* Cloneable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F112454B6600075D52C /* Cloneable.h */; };
+		B7671F162455E5370075D52C /* Device.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F142455E5370075D52C /* Device.mm */; };
+		B7671F172455E5370075D52C /* Device.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F152455E5370075D52C /* Device.h */; };
+		B7671F1A2455E6A80075D52C /* CommandQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F182455E6A80075D52C /* CommandQueue.mm */; };
+		B7671F1B2455E6A80075D52C /* CommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F192455E6A80075D52C /* CommandQueue.h */; };
+		B7671F1E2455EB550075D52C /* CommandBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F1C2455EB550075D52C /* CommandBuffer.mm */; };
+		B7671F1F2455EB550075D52C /* CommandBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F1D2455EB550075D52C /* CommandBuffer.h */; };
+		B7671F2624560C700075D52C /* CommandEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F2424560C700075D52C /* CommandEncoder.mm */; };
+		B7671F2724560C700075D52C /* CommandEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F2524560C700075D52C /* CommandEncoder.h */; };
+		B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */; };
+		B7671F2B24560D9C0075D52C /* RenderCommandEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F2924560D9C0075D52C /* RenderCommandEncoder.h */; };
+		B7671F32245743AE0075D52C /* Drawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F30245743AE0075D52C /* Drawable.mm */; };
+		B7671F33245743AE0075D52C /* Drawable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F31245743AE0075D52C /* Drawable.h */; };
+		B7671F37245744430075D52C /* MetalDrawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F35245744430075D52C /* MetalDrawable.mm */; };
+		B7671F38245744430075D52C /* MetalDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F36245744430075D52C /* MetalDrawable.h */; };
+		B7671F3C2457492D0075D52C /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671F3A2457492D0075D52C /* Scene.cpp */; };
+		B7671F3D2457492D0075D52C /* Scene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7671F3B2457492D0075D52C /* Scene.hpp */; };
+		B7671F41245766630075D52C /* Spirit.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F3F245766630075D52C /* Spirit.h */; };
+		B7671F42245766630075D52C /* Spirit.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F40245766630075D52C /* Spirit.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +71,25 @@
 		B7671F0D2454A2210075D52C /* Equatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equatable.h; sourceTree = "<group>"; };
 		B7671F102454B6600075D52C /* Cloneable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Cloneable.mm; sourceTree = "<group>"; };
 		B7671F112454B6600075D52C /* Cloneable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cloneable.h; sourceTree = "<group>"; };
+		B7671F142455E5370075D52C /* Device.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Device.mm; sourceTree = "<group>"; };
+		B7671F152455E5370075D52C /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		B7671F182455E6A80075D52C /* CommandQueue.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandQueue.mm; sourceTree = "<group>"; };
+		B7671F192455E6A80075D52C /* CommandQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandQueue.h; sourceTree = "<group>"; };
+		B7671F1C2455EB550075D52C /* CommandBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandBuffer.mm; sourceTree = "<group>"; };
+		B7671F1D2455EB550075D52C /* CommandBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandBuffer.h; sourceTree = "<group>"; };
+		B7671F2424560C700075D52C /* CommandEncoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandEncoder.mm; sourceTree = "<group>"; };
+		B7671F2524560C700075D52C /* CommandEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandEncoder.h; sourceTree = "<group>"; };
+		B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderCommandEncoder.mm; sourceTree = "<group>"; };
+		B7671F2924560D9C0075D52C /* RenderCommandEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderCommandEncoder.h; sourceTree = "<group>"; };
+		B7671F30245743AE0075D52C /* Drawable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Drawable.mm; sourceTree = "<group>"; };
+		B7671F31245743AE0075D52C /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
+		B7671F35245744430075D52C /* MetalDrawable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalDrawable.mm; sourceTree = "<group>"; };
+		B7671F36245744430075D52C /* MetalDrawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalDrawable.h; sourceTree = "<group>"; };
+		B7671F3A2457492D0075D52C /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		B7671F3B2457492D0075D52C /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
+		B7671F3E24575E170075D52C /* Metal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Metal.hpp; sourceTree = "<group>"; };
+		B7671F3F245766630075D52C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
+		B7671F40245766630075D52C /* Spirit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Spirit.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B7671EEA2450C4320075D52C /* apple */,
+				B7671F39245749130075D52C /* spirit */,
 			);
 			path = Spirit;
 			sourceTree = "<group>";
@@ -122,8 +160,10 @@
 		B7671EEA2450C4320075D52C /* apple */ = {
 			isa = PBXGroup;
 			children = (
+				B7671F3E24575E170075D52C /* Metal.hpp */,
 				B7671EEB2450C4320075D52C /* core */,
 				B7671EEE2450C4320075D52C /* metal */,
+				B7671F34245744110075D52C /* core_animation */,
 			);
 			path = apple;
 			sourceTree = "<group>";
@@ -148,8 +188,20 @@
 		B7671EEE2450C4320075D52C /* metal */ = {
 			isa = PBXGroup;
 			children = (
+				B7671F142455E5370075D52C /* Device.mm */,
+				B7671F152455E5370075D52C /* Device.h */,
+				B7671F182455E6A80075D52C /* CommandQueue.mm */,
+				B7671F192455E6A80075D52C /* CommandQueue.h */,
+				B7671F1C2455EB550075D52C /* CommandBuffer.mm */,
+				B7671F1D2455EB550075D52C /* CommandBuffer.h */,
 				B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */,
 				B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */,
+				B7671F2424560C700075D52C /* CommandEncoder.mm */,
+				B7671F2524560C700075D52C /* CommandEncoder.h */,
+				B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */,
+				B7671F2924560D9C0075D52C /* RenderCommandEncoder.h */,
+				B7671F30245743AE0075D52C /* Drawable.mm */,
+				B7671F31245743AE0075D52C /* Drawable.h */,
 			);
 			path = metal;
 			sourceTree = "<group>";
@@ -161,6 +213,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7671F34245744110075D52C /* core_animation */ = {
+			isa = PBXGroup;
+			children = (
+				B7671F35245744430075D52C /* MetalDrawable.mm */,
+				B7671F36245744430075D52C /* MetalDrawable.h */,
+			);
+			path = core_animation;
+			sourceTree = "<group>";
+		};
+		B7671F39245749130075D52C /* spirit */ = {
+			isa = PBXGroup;
+			children = (
+				B7671F3F245766630075D52C /* Spirit.h */,
+				B7671F40245766630075D52C /* Spirit.mm */,
+				B7671F3A2457492D0075D52C /* Scene.cpp */,
+				B7671F3B2457492D0075D52C /* Scene.hpp */,
+			);
+			path = spirit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -168,10 +240,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7671F2724560C700075D52C /* CommandEncoder.h in Headers */,
+				B7671F1F2455EB550075D52C /* CommandBuffer.h in Headers */,
+				B7671F1B2455E6A80075D52C /* CommandQueue.h in Headers */,
 				B7671F04245356F20075D52C /* TestObjCObject.h in Headers */,
+				B7671F38245744430075D52C /* MetalDrawable.h in Headers */,
 				B7671F132454B6600075D52C /* Cloneable.h in Headers */,
+				B7671F2B24560D9C0075D52C /* RenderCommandEncoder.h in Headers */,
+				B7671F172455E5370075D52C /* Device.h in Headers */,
+				B7671F33245743AE0075D52C /* Drawable.h in Headers */,
+				B7671F41245766630075D52C /* Spirit.h in Headers */,
 				B7671F012452CDFB0075D52C /* TestObj.h in Headers */,
 				B7671EF42450C54C0075D52C /* RenderPassDescriptor.h in Headers */,
+				B7671F3D2457492D0075D52C /* Scene.hpp in Headers */,
 				B7671F0F2454A2210075D52C /* Equatable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,8 +352,17 @@
 				B7671F05245356F20075D52C /* TestObjCObject.m in Sources */,
 				B7671EEF2450C4320075D52C /* Ref.mm in Sources */,
 				B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */,
+				B7671F32245743AE0075D52C /* Drawable.mm in Sources */,
+				B7671F37245744430075D52C /* MetalDrawable.mm in Sources */,
 				B7671F122454B6600075D52C /* Cloneable.mm in Sources */,
 				B7671F002452CDFB0075D52C /* TestObj.mm in Sources */,
+				B7671F1E2455EB550075D52C /* CommandBuffer.mm in Sources */,
+				B7671F3C2457492D0075D52C /* Scene.cpp in Sources */,
+				B7671F42245766630075D52C /* Spirit.mm in Sources */,
+				B7671F1A2455E6A80075D52C /* CommandQueue.mm in Sources */,
+				B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */,
+				B7671F162455E5370075D52C /* Device.mm in Sources */,
+				B7671F2624560C700075D52C /* CommandEncoder.mm in Sources */,
 				B7671F0E2454A2210075D52C /* Equatable.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,10 +506,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				MODULEMAP_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -430,10 +522,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				MODULEMAP_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -445,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -471,6 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

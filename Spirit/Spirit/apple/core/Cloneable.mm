@@ -13,7 +13,7 @@
 namespace apple::core {
 
 CloneableRef CloneableRef::clone() const {
-    return CloneableRef { [objcHandle() copy] };
+    return CloneableRef { [obj<id>() copy] };
 }
 
 }

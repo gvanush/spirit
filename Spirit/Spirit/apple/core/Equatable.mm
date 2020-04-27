@@ -11,7 +11,7 @@
 namespace apple::core {
 
 bool EquatableRef::isEqual(const EquatableRef& eqRef) const {
-    return [ptr<NSObject>() isEqual: eqRef.ptr<NSObject>()];
+    return [obj<id>() isEqual: eqRef.obj<id>()];
 }
 
 }
