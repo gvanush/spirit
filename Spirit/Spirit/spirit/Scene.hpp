@@ -8,25 +8,33 @@
 
 #pragma once
 
-#include "../apple/Metal.hpp"
+#include "math/Math.hpp"
+
+#include "../apple/metal/Metal.hpp"
 
 namespace spirit {
 
 class Scene {
 public:
     
-    Scene();
+    Scene(apple::metal::PixelFormat colorPixelFormat);
     
     inline void setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref);
     inline void setDrawable(const apple::metal::DrawableRef& ref);
+    
+    inline void setViewportSize(const math::Size2& size);
     
     void render() const;
     
 private:
     apple::metal::DeviceRef _deviceRef;
     apple::metal::CommandQueueRef _commandQueueRef;
+    apple::metal::LibraryRef _libraryRef;
+    apple::metal::RenderPipelineStateRef _pipelineStateRef;
     apple::metal::RenderPassDescriptorRef _renderPassDescriptorRef;
     apple::metal::DrawableRef _drawableRef;
+    
+    math::Size2 _viewportSize;
 };
 
 void Scene::setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref) {
@@ -35,6 +43,10 @@ void Scene::setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef&
 
 void Scene::setDrawable(const apple::metal::DrawableRef& ref) {
     _drawableRef = ref;
+}
+
+void Scene::setViewportSize(const math::Size2& size) {
+    _viewportSize = size;
 }
 
 }

@@ -8,7 +8,7 @@
 
 #include "Ref.h"
 
-namespace apple::core {
+namespace apple {
 
 Ref::Ref()
 : _handle {nullptr} {

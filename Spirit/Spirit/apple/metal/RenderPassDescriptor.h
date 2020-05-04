@@ -8,31 +8,20 @@
 
 #pragma once
 
-#include "../core/Ref.h"
-#include "../core/Equatable.h"
-#include "../core/Cloneable.h"
+#include "../Object.h"
 
 #include <objc/NSObjCRuntime.h>
 
 namespace apple::metal {
 
-class RenderPassDescriptorRef: public core::Ref {
+class RenderPassDescriptorRef: public ObjectRef {
 public:
     
-    using Ref::Ref;
+    using ObjectRef::ObjectRef;
     
-    // Equatable
-    bool isEqual(RenderPassDescriptorRef ref) const;
-    operator core::EquatableRef () const;
-    
-    // Cloneable
-    RenderPassDescriptorRef clone() const;
-    operator core::CloneableRef () const;
-    
-    // RenderPassDescriptor
     NSUInteger renderTargetWidth() const;
     NSUInteger renderTargetHeight() const;
-    
+
 };
 
 namespace RenderPassDescriptor {

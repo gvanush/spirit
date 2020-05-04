@@ -7,11 +7,3 @@
 //
 
 #include "MetalDrawable.h"
-
-namespace apple::core_animation {
-
-MetalDrawableRef::operator metal::DrawableRef () const {
-    return metal::DrawableRef { handle() };
-}
-
-}

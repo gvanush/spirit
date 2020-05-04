@@ -12,7 +12,7 @@
 
 namespace apple::metal {
 
-CommandBufferRef CommandQueueRef::makeCommandBuffer() const {
+CommandBufferRef CommandQueueRef::newCommandBuffer() const {
     return CommandBufferRef { [obj<id<MTLCommandQueue>>() commandBuffer] };
 }
 

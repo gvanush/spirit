@@ -11,9 +11,12 @@
 
 @interface Spirit : NSObject
 
-@property (nonatomic, strong) MTLRenderPassDescriptor* _Nullable  renderPassDescriptor;
+@property (nonatomic, strong) MTLRenderPassDescriptor* _Nullable renderPassDescriptor;
 @property (nonatomic, strong) id<MTLDrawable> _Nullable drawable;
 
--(void) render;
+-(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat;
+
+-(void) onDrawableSizeChange: (CGSize) drawableSize;
+-(void) onDraw;
 
 @end

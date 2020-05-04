@@ -24,7 +24,7 @@ class ViewController: NSViewController, MTKViewDelegate {
         
         mtkView.delegate = self
         
-        spirit = Spirit()
+        spirit = Spirit(colorPixelFormat: mtkView.colorPixelFormat)
     }
 
     override var representedObject: Any? {
@@ -34,7 +34,7 @@ class ViewController: NSViewController, MTKViewDelegate {
     }
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        print("drawableSizeWillChange")
+        spirit.onDrawableSizeChange(size)
     }
     
     func draw(in view: MTKView) {
@@ -42,7 +42,7 @@ class ViewController: NSViewController, MTKViewDelegate {
         spirit.renderPassDescriptor = mtkView.currentRenderPassDescriptor
         spirit.drawable = mtkView.currentDrawable
         
-        spirit.render()
+        spirit.onDraw()
     }
 
 }

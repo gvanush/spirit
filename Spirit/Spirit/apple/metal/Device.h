@@ -8,20 +8,28 @@
 
 #pragma once
 
-#include "../core/Ref.h"
 #include "CommandQueue.h"
+#include "Library.h"
+#include "RenderPipelineState.h"
+#include "RenderPipelineDescriptor.h"
+
+#include "../ObjectProtocol.h"
+#include "../Error.h"
 
 namespace apple::metal {
 
-class DeviceRef: public core::Ref {
+class DeviceRef: public ObjectProtocolRef {
 public:
-    using Ref::Ref;
+    using ObjectProtocolRef::ObjectProtocolRef;
     
-    CommandQueueRef makeCommandQueue() const;
+    CommandQueueRef newCommandQueue() const;
+    
+    LibraryRef newDefaultLibrary() const;
+    
+    RenderPipelineStateRef newRenderPipelineStateWithDescriptor(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const;
+    
 };
 
-namespace Device {
-    DeviceRef createSystemDefaultDevice();
-};
+DeviceRef createSystemDefaultDevice();
 
 }

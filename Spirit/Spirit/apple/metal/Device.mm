@@ -12,16 +12,27 @@
 
 namespace apple::metal {
 
-CommandQueueRef DeviceRef::makeCommandQueue() const {
+CommandQueueRef DeviceRef::newCommandQueue() const {
     return CommandQueueRef { [obj<id<MTLDevice>>() newCommandQueue] };
 }
 
-namespace Device {
+LibraryRef DeviceRef::newDefaultLibrary() const {
+    return LibraryRef { [obj<id<MTLDevice>>() newDefaultLibrary] };
+}
 
-    DeviceRef createSystemDefaultDevice() {
-        return DeviceRef { MTLCreateSystemDefaultDevice() };
+RenderPipelineStateRef DeviceRef::newRenderPipelineStateWithDescriptor(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const {
+    if(errorRefPtr) {
+        NSError* error = errorRefPtr->obj<NSError*>();
+        id<MTLRenderPipelineState> renderPipelineState = [obj<id<MTLDevice>>() newRenderPipelineStateWithDescriptor: descriptorRef.obj<MTLRenderPipelineDescriptor*>() error: &error];
+        *errorRefPtr = ErrorRef { error };
+        return RenderPipelineStateRef { renderPipelineState };
+    } else {
+        return RenderPipelineStateRef { [obj<id<MTLDevice>>() newRenderPipelineStateWithDescriptor: descriptorRef.obj<MTLRenderPipelineDescriptor*>() error: nil] };
     }
+}
 
+DeviceRef createSystemDefaultDevice() {
+    return DeviceRef { MTLCreateSystemDefaultDevice() };
 }
 
 }

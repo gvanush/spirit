@@ -12,6 +12,14 @@
 
 namespace apple::metal {
 
+void CommandEncoderRef::setLabel(const StringRef& labelRef) const {
+    obj<id<MTLCommandEncoder>>().label = labelRef.obj<NSString*>();
+}
+
+StringRef CommandEncoderRef::label() const {
+    return StringRef { obj<id<MTLCommandEncoder>>().label };
+}
+
 void CommandEncoderRef::endEncoding() const {
     [obj<id<MTLCommandEncoder>>() endEncoding];
 }

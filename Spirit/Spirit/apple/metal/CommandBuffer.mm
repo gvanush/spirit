@@ -10,10 +10,20 @@
 
 #import <Metal/Metal.h>
 
+#include <iostream>
+
 namespace apple::metal {
 
-RenderCommandEncoderRef CommandBufferRef::makeRenderCommandEncoder(const RenderPassDescriptorRef& descriptor) const {
-    return RenderCommandEncoderRef { [obj<id<MTLCommandBuffer>>() renderCommandEncoderWithDescriptor: descriptor.obj<MTLRenderPassDescriptor*>()] };
+void CommandBufferRef::setLabel(const StringRef& labelRef) const {
+    obj<id<MTLCommandBuffer>>().label = labelRef.obj<NSString*>();
+}
+
+StringRef CommandBufferRef::label() const {
+    return StringRef { obj<id<MTLCommandBuffer>>().label };
+}
+
+RenderCommandEncoderRef CommandBufferRef::newRenderCommandEncoder(const RenderPassDescriptorRef& descriptorRef) const {
+    return RenderCommandEncoderRef { [obj<id<MTLCommandBuffer>>() renderCommandEncoderWithDescriptor: descriptorRef.obj<MTLRenderPassDescriptor*>()] };
 }
 
 void CommandBufferRef::present(const DrawableRef& drawableRef) {

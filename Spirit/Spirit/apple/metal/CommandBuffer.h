@@ -8,19 +8,26 @@
 
 #pragma once
 
-#include "../core/Ref.h"
 #include "RenderCommandEncoder.h"
 #include "RenderPassDescriptor.h"
 #include "Drawable.h"
 
+#include "../ObjectProtocol.h"
+#include "../String.h"
+
 namespace apple::metal {
 
-class CommandBufferRef: public core::Ref {
+class CommandBufferRef: public ObjectProtocolRef {
 public:
-    using Ref::Ref;
+    using ObjectProtocolRef::ObjectProtocolRef;
     
-    RenderCommandEncoderRef makeRenderCommandEncoder(const RenderPassDescriptorRef& descriptor) const;
+    void setLabel(const StringRef& labelRef) const;
+    StringRef label() const;
+    
+    RenderCommandEncoderRef newRenderCommandEncoder(const RenderPassDescriptorRef& descriptorRef) const;
+    
     void present(const DrawableRef& drawableRef);
+    
     void commit() const;
     
 };

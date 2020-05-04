@@ -12,23 +12,6 @@
 
 namespace apple::metal {
 
-bool RenderPassDescriptorRef::isEqual(RenderPassDescriptorRef ref) const {
-    return [obj<MTLRenderPassDescriptor*>() isEqual: ref.obj<MTLRenderPassDescriptor*>()];
-}
-
-RenderPassDescriptorRef::operator core::EquatableRef () const {
-    return core::EquatableRef { handle() };
-}
-
-RenderPassDescriptorRef RenderPassDescriptorRef::clone() const {
-    return RenderPassDescriptorRef { [obj<MTLRenderPassDescriptor*>() copy] };
-}
-
-RenderPassDescriptorRef::operator core::CloneableRef () const {
-    return core::CloneableRef { handle() };
-}
-
-
 NSUInteger RenderPassDescriptorRef::renderTargetWidth() const {
     return [obj<MTLRenderPassDescriptor*>() renderTargetWidth];
 }

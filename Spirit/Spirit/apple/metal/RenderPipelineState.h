@@ -1,8 +1,8 @@
 //
-//  Drawable.h
+//  RenderPipelineState.h
 //  Spirit
 //
-//  Created by Vanush Grigoryan on 4/27/20.
+//  Created by Vanush Grigoryan on 5/2/20.
 //  Copyright © 2020 Vanush Grigoryan. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 
 namespace apple::metal {
 
-class DrawableRef: public ObjectProtocolRef {
+class RenderPipelineStateRef: public ObjectProtocolRef {
 public:
     using ObjectProtocolRef::ObjectProtocolRef;
+    
 };
 
 }

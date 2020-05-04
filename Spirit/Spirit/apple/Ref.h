@@ -10,7 +10,7 @@
 
 #include <CoreFoundation/CoreFoundation.h>
 
-namespace apple::core {
+namespace apple {
 
 class Ref {
 public:
@@ -32,11 +32,11 @@ public:
     explicit Ref(CFTypeRef handle);
     
     template <typename T>
-    T obj() const {
+    inline T obj() const {
         return (__bridge T) _handle;
     }
     
-    CFTypeRef handle() const {
+    inline CFTypeRef handle() const {
         return _handle;
     }
     

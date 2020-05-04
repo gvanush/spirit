@@ -8,16 +8,14 @@
 
 #pragma once
 
-#include "../core/Ref.h"
 #include "../metal/Drawable.h"
 
 namespace apple::core_animation {
 
-class MetalDrawableRef: public core::Ref {
+class MetalDrawableRef: public metal::DrawableRef {
 public:
-    using Ref::Ref;
+    using DrawableRef::DrawableRef;
     
-    operator metal::DrawableRef () const;
 };
 
 }

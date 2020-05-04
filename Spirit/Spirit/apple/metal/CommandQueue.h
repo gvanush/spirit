@@ -8,16 +8,17 @@
 
 #pragma once
 
-#include "../core/Ref.h"
 #include "CommandBuffer.h"
+
+#include "../ObjectProtocol.h"
 
 namespace apple::metal {
 
-class CommandQueueRef: public core::Ref {
+class CommandQueueRef: public ObjectProtocolRef {
 public:
-    using Ref::Ref;
+    using ObjectProtocolRef::ObjectProtocolRef;
     
-    CommandBufferRef makeCommandBuffer() const;
+    CommandBufferRef newCommandBuffer() const;
     
 };
 
