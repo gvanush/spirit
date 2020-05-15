@@ -12,6 +12,8 @@
 #include "Library.h"
 #include "RenderPipelineState.h"
 #include "RenderPipelineDescriptor.h"
+#include "Resource.h"
+#include "Buffer.h"
 
 #include "../ObjectProtocol.h"
 #include "../Error.h"
@@ -26,7 +28,9 @@ public:
     
     LibraryRef newDefaultLibrary() const;
     
-    RenderPipelineStateRef newRenderPipelineStateWithDescriptor(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const;
+    RenderPipelineStateRef newRenderPipelineState(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const;
+    
+    BufferRef newBufferWithLength(NSUInteger length, ResourceOptions options);
     
 };
 

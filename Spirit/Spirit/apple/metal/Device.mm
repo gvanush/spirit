@@ -20,7 +20,7 @@ LibraryRef DeviceRef::newDefaultLibrary() const {
     return LibraryRef { [obj<id<MTLDevice>>() newDefaultLibrary] };
 }
 
-RenderPipelineStateRef DeviceRef::newRenderPipelineStateWithDescriptor(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const {
+RenderPipelineStateRef DeviceRef::newRenderPipelineState(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const {
     if(errorRefPtr) {
         NSError* error = errorRefPtr->obj<NSError*>();
         id<MTLRenderPipelineState> renderPipelineState = [obj<id<MTLDevice>>() newRenderPipelineStateWithDescriptor: descriptorRef.obj<MTLRenderPipelineDescriptor*>() error: &error];
@@ -29,6 +29,10 @@ RenderPipelineStateRef DeviceRef::newRenderPipelineStateWithDescriptor(const Ren
     } else {
         return RenderPipelineStateRef { [obj<id<MTLDevice>>() newRenderPipelineStateWithDescriptor: descriptorRef.obj<MTLRenderPipelineDescriptor*>() error: nil] };
     }
+}
+
+BufferRef DeviceRef::newBufferWithLength(NSUInteger length, ResourceOptions options) {
+    return BufferRef { [obj<id<MTLDevice>>() newBufferWithLength: length options: to<MTLResourceOptions>(options)] };
 }
 
 DeviceRef createSystemDefaultDevice() {

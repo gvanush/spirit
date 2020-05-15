@@ -13,7 +13,7 @@
 namespace apple::metal {
 
 void RenderPipelineColorAttachmentDescriptorRef::setPixelFormat(PixelFormat pixelFromat) const {
-    obj<MTLRenderPipelineColorAttachmentDescriptor*>().pixelFormat = toMTLPixelFormat(pixelFromat);
+    obj<MTLRenderPipelineColorAttachmentDescriptor*>().pixelFormat = to<MTLPixelFormat>(pixelFromat);
 }
 
 PixelFormat RenderPipelineColorAttachmentDescriptorRef::pixelFormat() const {

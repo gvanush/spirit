@@ -222,7 +222,13 @@ enum class PixelFormat: NSUInteger
 
 #ifdef __OBJC__
 
-inline MTLPixelFormat toMTLPixelFormat(PixelFormat pixelFormat) {
+template <typename T>
+inline T to(PixelFormat pixelFormat) {
+    return static_cast<T>(pixelFormat);
+}
+
+template <>
+inline MTLPixelFormat to(PixelFormat pixelFormat) {
     return MTLPixelFormat { std::underlying_type_t<PixelFormat>(pixelFormat) };
 }
 
