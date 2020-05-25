@@ -21,9 +21,9 @@
 
 @implementation Spirit
 
--(instancetype) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat {
+-(instancetype) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat sampleCount: (NSUInteger) sampleCount {
     if(self = [super init]) {
-        scene = std::make_unique<spirit::Scene>(apple::metal::PixelFormat {colorPixelFormat});
+        scene = std::make_unique<spirit::Scene>(apple::metal::PixelFormat {colorPixelFormat}, sampleCount);
     }
     return self;
 }

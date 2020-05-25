@@ -7,3 +7,13 @@
 //
 
 #include "Buffer.h"
+
+#include <Metal/Metal.h>
+
+namespace apple::metal {
+
+void* BufferRef::contents() const {
+    return obj<id<MTLBuffer>>().contents;
+}
+
+}

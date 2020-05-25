@@ -24,8 +24,8 @@ typedef struct
 
 vertex RasterizerData
 vertexShader(uint vertexID [[vertex_id]],
-             constant spirit::Vertex* vertices [[buffer(spirit::VertexInputIndex::Vertices)]],
-             constant spirit::math::Size2* viewportSizePtr [[buffer(spirit::VertexInputIndex::ViewportSize)]])
+             constant spirit::Vertex* vertices [[buffer(spirit::kVertexInputIndexVertices)]],
+             constant spirit::math::Size2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
 {
     RasterizerData out;
 

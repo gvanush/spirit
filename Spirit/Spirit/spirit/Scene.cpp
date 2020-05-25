@@ -12,12 +12,12 @@
 
 namespace spirit {
 
-Scene::Scene(apple::metal::PixelFormat colorPixelFormat)
-: _renderer(colorPixelFormat)
+Scene::Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount)
+: _renderer(colorPixelFormat, sampleCount)
 {
 }
 
-void Scene::render() const {
+void Scene::render() {
     _renderer.render();
 }
 

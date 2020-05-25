@@ -4,9 +4,9 @@
 
 namespace spirit {
 
-enum class VertexInputIndex: unsigned int {
-    Vertices     = 0,
-    ViewportSize = 1,
+enum VertexInputIndex: unsigned int {
+    kVertexInputIndexVertices     = 0,
+    kVertexInputIndexViewportSize = 1,
 };
 
 struct Vertex {

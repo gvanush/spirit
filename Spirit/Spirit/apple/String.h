@@ -27,4 +27,8 @@ namespace String {
     StringRef createWithUTF8String(const char* str);
 }
 
+inline StringRef operator"" _str (const char* str, [[maybe_unused]] size_t size) {
+    return String::createWithUTF8String(str);
+}
+
 }

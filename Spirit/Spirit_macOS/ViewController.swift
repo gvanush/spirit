@@ -24,7 +24,7 @@ class ViewController: NSViewController, MTKViewDelegate {
         
         mtkView.delegate = self
         
-        spirit = Spirit(colorPixelFormat: mtkView.colorPixelFormat)
+        spirit = Spirit(colorPixelFormat: mtkView.colorPixelFormat, sampleCount: UInt(mtkView.sampleCount))
     }
 
     override var representedObject: Any? {

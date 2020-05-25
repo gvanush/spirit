@@ -30,6 +30,13 @@ void CommandBufferRef::present(const DrawableRef& drawableRef) {
     [obj<id<MTLCommandBuffer>>() presentDrawable: drawableRef.obj<id<MTLDrawable>>()];
 }
 
+void CommandBufferRef::addCompletedHandler(CommandBufferHandler handler) {
+    assert(handler);
+    [obj<id<MTLCommandBuffer>>() addCompletedHandler: ^(id<MTLCommandBuffer> _Nonnull commandBuffer) {
+        handler(CommandBufferRef {commandBuffer});
+    }];
+}
+
 void CommandBufferRef::commit() const {
     [obj<id<MTLCommandBuffer>>() commit];
 }

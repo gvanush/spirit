@@ -41,10 +41,24 @@ RenderPipelineColorAttachmentDescriptorArrayRef RenderPipelineDescriptorRef::col
     return RenderPipelineColorAttachmentDescriptorArrayRef { obj<MTLRenderPipelineDescriptor*>().colorAttachments };
 }
 
+void RenderPipelineDescriptorRef::setSampleCount(NSUInteger sampleCount) const {
+    obj<MTLRenderPipelineDescriptor*>().sampleCount = sampleCount;
+}
+
+NSUInteger RenderPipelineDescriptorRef::sampleCount() const {
+    return obj<MTLRenderPipelineDescriptor*>().sampleCount;
+}
+
+PipelineBufferDescriptorArrayRef RenderPipelineDescriptorRef::vertexBuffers() const {
+    return PipelineBufferDescriptorArrayRef {obj<MTLRenderPipelineDescriptor*>().vertexBuffers};
+}
+
 namespace RenderPipelineDescriptor {
+
     RenderPipelineDescriptorRef create() {
         return RenderPipelineDescriptorRef { [[MTLRenderPipelineDescriptor alloc] init] };
     }
+
 }
 
 }

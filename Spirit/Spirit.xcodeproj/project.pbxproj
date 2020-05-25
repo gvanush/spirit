@@ -55,6 +55,8 @@
 		B78443FE2469DD4C0098A651 /* Resource.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78443FC2469DD4C0098A651 /* Resource.mm */; };
 		B78444022469DDE50098A651 /* Buffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78444002469DDE50098A651 /* Buffer.mm */; };
 		B78444032469DDE50098A651 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B78444012469DDE50098A651 /* Buffer.h */; };
+		B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */; };
+		B78444452479BDD10098A651 /* PipelineBufferDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,6 +146,11 @@
 		B78444012469DDE50098A651 /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 		B7844406246B45B70098A651 /* EnumBitMaskOperators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnumBitMaskOperators.hpp; sourceTree = "<group>"; };
 		B7844409246B51ED0098A651 /* ResourceOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceOptions.h; sourceTree = "<group>"; };
+		B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptorArray.mm; sourceTree = "<group>"; };
+		B78444402479B9F00098A651 /* PipelineBufferDescriptorArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptorArray.h; sourceTree = "<group>"; };
+		B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptor.mm; sourceTree = "<group>"; };
+		B78444442479BDD10098A651 /* PipelineBufferDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptor.h; sourceTree = "<group>"; };
+		B7844449247B0C430098A651 /* Semaphore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Semaphore.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +250,10 @@
 				B7671F99245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.h */,
 				B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */,
 				B7671FA9245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.h */,
+				B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */,
+				B78444402479B9F00098A651 /* PipelineBufferDescriptorArray.h */,
+				B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */,
+				B78444442479BDD10098A651 /* PipelineBufferDescriptor.h */,
 				B7671F182455E6A80075D52C /* CommandQueue.mm */,
 				B7671F192455E6A80075D52C /* CommandQueue.h */,
 				B7671F1C2455EB550075D52C /* CommandBuffer.mm */,
@@ -288,6 +299,8 @@
 		B7671F39245749130075D52C /* spirit */ = {
 			isa = PBXGroup;
 			children = (
+				B7844447247B0C2B0098A651 /* _internal */,
+				B7671F4A2458B4220075D52C /* math */,
 				B7671F3F245766630075D52C /* Spirit.h */,
 				B7671F40245766630075D52C /* Spirit.mm */,
 				B7671F3A2457492D0075D52C /* Scene.cpp */,
@@ -298,7 +311,6 @@
 				B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */,
 				B7671F482458A7BA0075D52C /* ShaderTypes.h */,
 				B7671F462458A7620075D52C /* Shaders.metal */,
-				B7671F4A2458B4220075D52C /* math */,
 			);
 			path = spirit;
 			sourceTree = "<group>";
@@ -323,6 +335,14 @@
 				B7844406246B45B70098A651 /* EnumBitMaskOperators.hpp */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		B7844447247B0C2B0098A651 /* _internal */ = {
+			isa = PBXGroup;
+			children = (
+				B7844449247B0C430098A651 /* Semaphore.hpp */,
+			);
+			path = _internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +472,7 @@
 				B78443FE2469DD4C0098A651 /* Resource.mm in Sources */,
 				B7671F9A245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm in Sources */,
 				B7671F92245B64630075D52C /* Function.mm in Sources */,
+				B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */,
 				B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */,
 				B7671FB6245DA4D00075D52C /* Error.mm in Sources */,
 				B7671F472458A7620075D52C /* Shaders.metal in Sources */,
@@ -460,6 +481,7 @@
 				B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */,
 				B7568A61245FF62C008943BA /* Geometry.cpp in Sources */,
 				B78444022469DDE50098A651 /* Buffer.mm in Sources */,
+				B78444452479BDD10098A651 /* PipelineBufferDescriptor.mm in Sources */,
 				B7671F8A245B51CA0075D52C /* Ref.mm in Sources */,
 				B7671F58245B49FC0075D52C /* Library.mm in Sources */,
 				B7671FA2245D544C0075D52C /* ObjectProtocol.mm in Sources */,

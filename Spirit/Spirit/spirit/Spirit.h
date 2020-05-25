@@ -14,7 +14,7 @@
 @property (nonatomic, strong) MTLRenderPassDescriptor* _Nullable renderPassDescriptor;
 @property (nonatomic, strong) id<MTLDrawable> _Nullable drawable;
 
--(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat;
+-(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat sampleCount: (NSUInteger) sampleCount;
 
 -(void) onDrawableSizeChange: (CGSize) drawableSize;
 -(void) onDraw;

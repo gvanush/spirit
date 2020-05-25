@@ -15,7 +15,13 @@
 #include "../ObjectProtocol.h"
 #include "../String.h"
 
+#include <functional>
+
 namespace apple::metal {
+
+class CommandBufferRef;
+
+using CommandBufferHandler = std::function<void (CommandBufferRef)>;
 
 class CommandBufferRef: public ObjectProtocolRef {
 public:
@@ -27,6 +33,8 @@ public:
     RenderCommandEncoderRef newRenderCommandEncoder(const RenderPassDescriptorRef& descriptorRef) const;
     
     void present(const DrawableRef& drawableRef);
+    
+    void addCompletedHandler(CommandBufferHandler handler);
     
     void commit() const;
     

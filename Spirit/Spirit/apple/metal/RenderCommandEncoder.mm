@@ -56,6 +56,10 @@ void RenderCommandEncoderRef::setVertexBytes(const void* bytes, NSUInteger lengt
     [obj<id<MTLRenderCommandEncoder>>() setVertexBytes: bytes length: length atIndex: index];
 }
 
+void RenderCommandEncoderRef::setVertexBuffer(const BufferRef& buffer, NSUInteger offset, NSUInteger index) {
+    [obj<id<MTLRenderCommandEncoder>>() setVertexBuffer: buffer.obj<id<MTLBuffer>>() offset: offset atIndex: index];
+}
+
 void RenderCommandEncoderRef::drawPrimitives(PrimitiveType primitiveType, NSUInteger vertexStart, NSUInteger vertexCount) {
     [obj<id<MTLRenderCommandEncoder>>() drawPrimitives: toMTLPrimitiveType(primitiveType) vertexStart: vertexStart vertexCount: vertexCount];
 }

@@ -9,6 +9,7 @@
 #pragma once
 
 #include "TriangleRenderer.hpp"
+#include "TriangleWaveRenderer.hpp"
 
 #include "math/Math.hpp"
 
@@ -19,17 +20,18 @@ namespace spirit {
 class Scene {
 public:
     
-    Scene(apple::metal::PixelFormat colorPixelFormat);
+    Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
     
     inline void setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref);
     inline void setDrawable(const apple::metal::DrawableRef& ref);
     
     inline void setViewportSize(const math::Size2& size);
     
-    void render() const;
+    void render();
     
 private:
-    TriangleRenderer _renderer;
+//    TriangleRenderer _renderer;
+    TriangleWaveRenderer _renderer;
 };
 
 void Scene::setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref) {

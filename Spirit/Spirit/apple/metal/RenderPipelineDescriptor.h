@@ -9,6 +9,7 @@
 
 #include "Function.h"
 #include "RenderPipelineColorAttachmentDescriptorArray.h"
+#include "PipelineBufferDescriptorArray.h"
 
 #include "../Object.h"
 #include "../String.h"
@@ -29,6 +30,11 @@ public:
     FunctionRef fragmentFunction() const;
     
     RenderPipelineColorAttachmentDescriptorArrayRef colorAttachments() const;
+    
+    void setSampleCount(NSUInteger sampleCount) const;
+    NSUInteger sampleCount() const;
+    
+    PipelineBufferDescriptorArrayRef vertexBuffers() const;
 
 };
 

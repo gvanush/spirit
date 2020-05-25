@@ -10,6 +10,7 @@
 
 #include "CommandEncoder.h"
 #include "RenderPipelineState.h"
+#include "Buffer.h"
 
 #include <objc/NSObjCRuntime.h>
 
@@ -37,6 +38,8 @@ public:
     void setRenderPipelineState(const RenderPipelineStateRef& stateRef);
     
     void setVertexBytes(const void* bytes, NSUInteger length, NSUInteger index);
+    
+    void setVertexBuffer(const BufferRef& buffer, NSUInteger offset, NSUInteger index);
     
     void drawPrimitives(PrimitiveType primitiveType, NSUInteger vertexStart, NSUInteger vertexCount);
     

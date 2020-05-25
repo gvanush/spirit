@@ -7,7 +7,6 @@
 //
 
 #include "TriangleRenderer.hpp"
-
 #include "ShaderTypes.h"
 
 namespace spirit {
@@ -19,11 +18,11 @@ TriangleRenderer::TriangleRenderer(apple::metal::PixelFormat colorPixelFormat) {
     _libraryRef = _deviceRef.newDefaultLibrary();
     assert(_libraryRef);
     
-    const auto vertexFunctionRef = _libraryRef.makeFunction(String::createWithUTF8String(u8"vertexShader"));
-    const auto fragmentFunctionRef = _libraryRef.makeFunction(String::createWithUTF8String(u8"fragmentShader"));
+    const auto vertexFunctionRef = _libraryRef.makeFunction(u8"vertexShader"_str);
+    const auto fragmentFunctionRef = _libraryRef.makeFunction(u8"fragmentShader"_str);
     
     const auto pipelineStateDescriptorRef = metal::RenderPipelineDescriptor::create();
-    pipelineStateDescriptorRef.setLabel(String::createWithUTF8String(u8"Simple Pipeline"));
+    pipelineStateDescriptorRef.setLabel(u8"Simple Pipeline"_str);
     pipelineStateDescriptorRef.setVertexFunction(vertexFunctionRef);
     pipelineStateDescriptorRef.setFragmentFunction(fragmentFunctionRef);
     pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(colorPixelFormat);
@@ -62,9 +61,9 @@ void TriangleRenderer::render() const {
         { {    0,   size }, { 0, 0, 1, 1 } },
     };
     
-    commandEncoderRef.setVertexBytes(triangleVertices, sizeof(triangleVertices), static_cast<NSUInteger>(VertexInputIndex::Vertices));
+    commandEncoderRef.setVertexBytes(triangleVertices, sizeof(triangleVertices), kVertexInputIndexVertices);
     
-    commandEncoderRef.setVertexBytes(&_viewportSize, sizeof(_viewportSize), static_cast<NSUInteger>(VertexInputIndex::ViewportSize));
+    commandEncoderRef.setVertexBytes(&_viewportSize, sizeof(_viewportSize), kVertexInputIndexViewportSize);
 
     commandEncoderRef.drawPrimitives(PrimitiveType::Triangle, 0, 3);
     

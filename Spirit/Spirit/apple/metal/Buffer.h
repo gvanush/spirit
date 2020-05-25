@@ -15,6 +15,8 @@ namespace apple::metal {
 class BufferRef: public ResourceRef {
 public:
     using ResourceRef::ResourceRef;
+    
+    void* contents() const;
 };
 
 }
