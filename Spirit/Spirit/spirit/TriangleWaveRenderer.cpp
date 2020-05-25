@@ -8,6 +8,7 @@
 
 #include "TriangleWaveRenderer.hpp"
 #include "ShaderTypes.h"
+#include "RenderingContext.h"
 
 namespace spirit {
 
@@ -17,7 +18,7 @@ constexpr int kTriangleVertexCount = 3;
 
 }
 
-TriangleWaveRenderer::TriangleWaveRenderer(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount)
+TriangleWaveRenderer::TriangleWaveRenderer()
 : _wavePosition {0.f}
 , _currentBufferIndex {0}
 , _inFlightSemaphore {kMaxFramesInFlight} {
@@ -35,8 +36,8 @@ TriangleWaveRenderer::TriangleWaveRenderer(apple::metal::PixelFormat colorPixelF
     pipelineStateDescriptorRef.setLabel(u8"Simple Pipeline"_str);
     pipelineStateDescriptorRef.setVertexFunction(vertexFunctionRef);
     pipelineStateDescriptorRef.setFragmentFunction(fragmentFunctionRef);
-    pipelineStateDescriptorRef.setSampleCount(sampleCount);
-    pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(colorPixelFormat);
+    pipelineStateDescriptorRef.setSampleCount(RenderingContext::kSampleCount);
+    pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(RenderingContext::kColorPixelFormat);
     pipelineStateDescriptorRef.vertexBuffers().objectAtIndex(kVertexInputIndexVertices).setMutability(metal::Mutability::Immutable);
     
     ErrorRef errorRef;

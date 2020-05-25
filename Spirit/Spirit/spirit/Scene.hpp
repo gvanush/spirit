@@ -21,8 +21,6 @@ namespace spirit {
 class Scene {
 public:
     
-    Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
-    
     void render(const RenderingContext* renderingContext);
     
 private:

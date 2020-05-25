@@ -21,11 +21,13 @@ class ViewController: NSViewController, MTKViewDelegate {
         mtkView = MTKView(frame: self.view.bounds, device: MTLCreateSystemDefaultDevice())
         mtkView.autoresizingMask = [.width, .height]
         mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 1.0, 1.0);
+        mtkView.colorPixelFormat = SPRTRenderingContext.colorPixelFormat()
+        mtkView.sampleCount = Int(SPRTRenderingContext.sampleCount())
         self.view.addSubview(mtkView)
         
         mtkView.delegate = self
         
-        spirit = Spirit(colorPixelFormat: mtkView.colorPixelFormat, sampleCount: UInt(mtkView.sampleCount))
+        spirit = Spirit()
         
         renderingContext = SPRTRenderingContext()
     }

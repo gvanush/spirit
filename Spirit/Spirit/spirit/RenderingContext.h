@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) init;
 
++(MTLPixelFormat) colorPixelFormat;
++(NSUInteger) sampleCount;
+
 @end
 
 NS_ASSUME_NONNULL_END
@@ -41,6 +44,9 @@ namespace spirit {
 
 class RenderingContext {
 public:
+    
+    static constexpr inline auto kColorPixelFormat = apple::metal::PixelFormat::BGRA8Unorm;
+    static constexpr inline NSUInteger kSampleCount = 1;
     
     inline void setDrawable(const apple::metal::DrawableRef& drawable);
     inline const apple::metal::DrawableRef& drawable() const;

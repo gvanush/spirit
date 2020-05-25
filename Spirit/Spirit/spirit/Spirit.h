@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Spirit : NSObject
 
--(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat sampleCount: (NSUInteger) sampleCount;
+-(instancetype _Nonnull ) init;
 
 -(void) onDraw: (SPRTRenderingContext*) renderingContext;
 

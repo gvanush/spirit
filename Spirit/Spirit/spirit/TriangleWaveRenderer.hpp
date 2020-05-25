@@ -8,8 +8,6 @@
 
 #pragma once
 
-#include "RenderingContext.h"
-
 #include "math/Math.hpp"
 #include "_internal/Semaphore.hpp"
 
@@ -20,10 +18,12 @@
 
 namespace spirit {
 
+class RenderingContext;
+
 class TriangleWaveRenderer {
 public:
     
-    TriangleWaveRenderer(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
+    TriangleWaveRenderer();
     
     void render(const RenderingContext* renderingContext);
     

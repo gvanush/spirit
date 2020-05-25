@@ -8,10 +8,11 @@
 
 #include "TriangleRenderer.hpp"
 #include "ShaderTypes.h"
+#include "RenderingContext.h"
 
 namespace spirit {
 
-TriangleRenderer::TriangleRenderer(apple::metal::PixelFormat colorPixelFormat) {
+TriangleRenderer::TriangleRenderer() {
     using namespace apple;
     
     _deviceRef = metal::createSystemDefaultDevice();
@@ -25,7 +26,7 @@ TriangleRenderer::TriangleRenderer(apple::metal::PixelFormat colorPixelFormat) {
     pipelineStateDescriptorRef.setLabel(u8"Simple Pipeline"_str);
     pipelineStateDescriptorRef.setVertexFunction(vertexFunctionRef);
     pipelineStateDescriptorRef.setFragmentFunction(fragmentFunctionRef);
-    pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(colorPixelFormat);
+    pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(RenderingContext::kColorPixelFormat);
     
     ErrorRef errorRef;
     _pipelineStateRef = _deviceRef.newRenderPipelineState(pipelineStateDescriptorRef, &errorRef);

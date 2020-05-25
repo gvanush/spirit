@@ -18,13 +18,6 @@
 
 @implementation SPRTRenderingContext
 
--(instancetype) init {
-    if(self = [super init]) {
-        _cpp = std::make_unique<spirit::RenderingContext>();
-    }
-    return self;
-}
-
 -(void) setDrawable: (id<MTLDrawable>) drawable {
     _cpp->setDrawable(apple::metal::DrawableRef {drawable});
 }
@@ -47,6 +40,21 @@
 
 -(MTLRenderPassDescriptor*) renderPassDescriptor {
     return _cpp->renderpassDescriptor().obj<id>();
+}
+
+-(instancetype) init {
+    if(self = [super init]) {
+        _cpp = std::make_unique<spirit::RenderingContext>();
+    }
+    return self;
+}
+
++(MTLPixelFormat) colorPixelFormat {
+    return apple::metal::to<MTLPixelFormat>(spirit::RenderingContext::kColorPixelFormat);
+}
+
++(NSUInteger) sampleCount {
+    return spirit::RenderingContext::kSampleCount;
 }
 
 @end

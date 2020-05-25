@@ -8,17 +8,18 @@
 
 #pragma once
 
-#include "RenderingContext.h"
 #include "math/Math.hpp"
 
 #include "../apple/metal/Metal.hpp"
 
 namespace spirit {
 
+class RenderingContext;
+
 class TriangleRenderer {
 public:
     
-    TriangleRenderer(apple::metal::PixelFormat colorPixelFormat);
+    TriangleRenderer();
     
     void render(const RenderingContext* renderingContext);
     
