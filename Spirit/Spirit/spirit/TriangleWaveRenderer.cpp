@@ -71,6 +71,7 @@ void TriangleWaveRenderer::render(const RenderingContext* renderingContext) {
     assert(commandEncoderRef);
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
+    _viewportSize = renderingContext->drawableSize();
     commandEncoderRef.setViewport(metal::Viewport {0.0, 0.0, _viewportSize.width, _viewportSize.height, 0.0, 1.0});
     
     commandEncoderRef.setRenderPipelineState(_pipelineStateRef);

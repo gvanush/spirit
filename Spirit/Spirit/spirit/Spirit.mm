@@ -28,10 +28,6 @@
     return self;
 }
 
--(void) onDrawableSizeChange: (CGSize) drawableSize {
-    scene->setViewportSize(spirit::math::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
-}
-
 -(void) onDraw: (SPRTRenderingContext*) renderingContext {
     scene->render(renderingContext.cpp);
 }

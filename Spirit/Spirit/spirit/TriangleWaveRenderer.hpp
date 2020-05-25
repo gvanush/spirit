@@ -25,8 +25,6 @@ public:
     
     TriangleWaveRenderer(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
     
-    inline void setViewportSize(const math::Size2& size);
-    
     void render(const RenderingContext* renderingContext);
     
 private:
@@ -54,9 +52,5 @@ private:
     math::Size2 _viewportSize;
     
 };
-
-void TriangleWaveRenderer::setViewportSize(const math::Size2& size) {
-    _viewportSize = size;
-}
 
 }

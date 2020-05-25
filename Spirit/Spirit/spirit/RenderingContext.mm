@@ -33,6 +33,14 @@
     return _cpp->drawable().obj<id>();
 }
 
+-(void) setDrawableSize: (CGSize) drawableSize {
+    _cpp->setDrawableSize(spirit::math::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
+}
+
+-(CGSize) drawableSize {
+    return CGSizeMake(_cpp->drawableSize().width, _cpp->drawableSize().height);
+}
+
 -(void) setRenderPassDescriptor: (MTLRenderPassDescriptor*) renderPassDescriptor {
     _cpp->setRenderpassDescriptor(apple::metal::RenderPassDescriptorRef {renderPassDescriptor});
 }

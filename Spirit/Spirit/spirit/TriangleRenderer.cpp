@@ -34,7 +34,7 @@ TriangleRenderer::TriangleRenderer(apple::metal::PixelFormat colorPixelFormat) {
     _commandQueueRef = _deviceRef.newCommandQueue();
 }
 
-void TriangleRenderer::render(const RenderingContext* renderingContext) const {
+void TriangleRenderer::render(const RenderingContext* renderingContext) {
     
     using namespace apple;
     using namespace apple::metal;
@@ -47,6 +47,7 @@ void TriangleRenderer::render(const RenderingContext* renderingContext) const {
     assert(commandEncoderRef);
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
+    _viewportSize = renderingContext->drawableSize();
     commandEncoderRef.setViewport(Viewport {0.0, 0.0, _viewportSize.width, _viewportSize.height, 0.0, 1.0});
     
     commandEncoderRef.setRenderPipelineState(_pipelineStateRef);

@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat sampleCount: (NSUInteger) sampleCount;
 
--(void) onDrawableSizeChange: (CGSize) drawableSize;
 -(void) onDraw: (SPRTRenderingContext*) renderingContext;
 
 @end

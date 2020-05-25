@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SPRTRenderingContext : NSObject
 
 @property (nonatomic, strong) id<MTLDrawable> drawable;
+@property (nonatomic) CGSize drawableSize;
 @property (nonatomic, strong) MTLRenderPassDescriptor* renderPassDescriptor;
 
 -(instancetype) init;
@@ -32,6 +33,8 @@ NS_ASSUME_NONNULL_END
 
 #pragma once
 
+#include "math/Math.hpp"
+
 #include "../apple/metal/Metal.hpp"
 
 namespace spirit {
@@ -42,12 +45,16 @@ public:
     inline void setDrawable(const apple::metal::DrawableRef& drawable);
     inline const apple::metal::DrawableRef& drawable() const;
     
+    inline void setDrawableSize(const math::Size2& ds);
+    inline const math::Size2& drawableSize() const;
+    
     inline void setRenderpassDescriptor(const apple::metal::RenderPassDescriptorRef& rpd);
     inline const apple::metal::RenderPassDescriptorRef& renderpassDescriptor() const;
     
 private:
     apple::metal::DrawableRef _drawable;
     apple::metal::RenderPassDescriptorRef _renderPassDescriptor;
+    math::Size2 _drawableSize;
 };
 
 void RenderingContext::setDrawable(const apple::metal::DrawableRef& drawable) {
@@ -56,6 +63,14 @@ void RenderingContext::setDrawable(const apple::metal::DrawableRef& drawable) {
 
 const apple::metal::DrawableRef& RenderingContext::drawable() const {
     return _drawable;
+}
+
+void RenderingContext::setDrawableSize(const math::Size2& ds) {
+    _drawableSize = ds;
+}
+
+const math::Size2& RenderingContext::drawableSize() const {
+    return _drawableSize;
 }
 
 void RenderingContext::setRenderpassDescriptor(const apple::metal::RenderPassDescriptorRef& rpd) {

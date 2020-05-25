@@ -37,7 +37,7 @@ class ViewController: NSViewController, MTKViewDelegate {
     }
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        spirit.onDrawableSizeChange(size)
+        renderingContext.drawableSize = size
     }
     
     func draw(in view: MTKView) {

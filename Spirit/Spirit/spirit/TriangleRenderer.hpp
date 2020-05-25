@@ -20,9 +20,7 @@ public:
     
     TriangleRenderer(apple::metal::PixelFormat colorPixelFormat);
     
-    inline void setViewportSize(const math::Size2& size);
-    
-    void render(const RenderingContext* renderingContext) const;
+    void render(const RenderingContext* renderingContext);
     
 private:
     apple::metal::DeviceRef _deviceRef;
@@ -32,9 +30,5 @@ private:
     
     math::Size2 _viewportSize;
 };
-
-void TriangleRenderer::setViewportSize(const math::Size2& size) {
-    _viewportSize = size;
-}
 
 }

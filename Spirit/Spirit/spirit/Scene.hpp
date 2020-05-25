@@ -23,17 +23,11 @@ public:
     
     Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
     
-    inline void setViewportSize(const math::Size2& size);
-    
     void render(const RenderingContext* renderingContext);
     
 private:
 //    TriangleRenderer _renderer;
     TriangleWaveRenderer _renderer;
 };
-
-void Scene::setViewportSize(const math::Size2& size) {
-    _renderer.setViewportSize(size);
-}
 
 }
