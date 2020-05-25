@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include "RenderingContext.h"
 #include "TriangleRenderer.hpp"
 #include "TriangleWaveRenderer.hpp"
 
@@ -22,25 +23,14 @@ public:
     
     Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
     
-    inline void setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref);
-    inline void setDrawable(const apple::metal::DrawableRef& ref);
-    
     inline void setViewportSize(const math::Size2& size);
     
-    void render();
+    void render(const RenderingContext* renderingContext);
     
 private:
 //    TriangleRenderer _renderer;
     TriangleWaveRenderer _renderer;
 };
-
-void Scene::setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref) {
-    _renderer.setRenderPassDescriptor(ref);
-}
-
-void Scene::setDrawable(const apple::metal::DrawableRef& ref) {
-    _renderer.setDrawable(ref);
-}
 
 void Scene::setViewportSize(const math::Size2& size) {
     _renderer.setViewportSize(size);

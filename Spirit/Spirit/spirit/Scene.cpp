@@ -17,8 +17,8 @@ Scene::Scene(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount)
 {
 }
 
-void Scene::render() {
-    _renderer.render();
+void Scene::render(const RenderingContext* renderingContext) {
+    _renderer.render(renderingContext);
 }
 
 }

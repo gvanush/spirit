@@ -3,3 +3,4 @@
 //
 
 #import "Spirit.h"
+#import "RenderingContext.h"

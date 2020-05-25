@@ -13,6 +13,7 @@ class ViewController: NSViewController, MTKViewDelegate {
     
     var mtkView: MTKView!
     var spirit: Spirit!
+    var renderingContext: SPRTRenderingContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ViewController: NSViewController, MTKViewDelegate {
         mtkView.delegate = self
         
         spirit = Spirit(colorPixelFormat: mtkView.colorPixelFormat, sampleCount: UInt(mtkView.sampleCount))
+        
+        renderingContext = SPRTRenderingContext()
     }
 
     override var representedObject: Any? {
@@ -39,10 +42,14 @@ class ViewController: NSViewController, MTKViewDelegate {
     
     func draw(in view: MTKView) {
         
-        spirit.renderPassDescriptor = mtkView.currentRenderPassDescriptor
-        spirit.drawable = mtkView.currentDrawable
+        guard let drawable = mtkView.currentDrawable, let renderPassDescriptor = mtkView.currentRenderPassDescriptor else {
+            return
+        }
         
-        spirit.onDraw()
+        renderingContext.renderPassDescriptor = renderPassDescriptor
+        renderingContext.drawable = drawable
+        
+        spirit.onDraw(renderingContext)
     }
 
 }

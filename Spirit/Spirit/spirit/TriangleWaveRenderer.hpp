@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include "RenderingContext.h"
+
 #include "math/Math.hpp"
 #include "_internal/Semaphore.hpp"
 
@@ -24,10 +26,8 @@ public:
     TriangleWaveRenderer(apple::metal::PixelFormat colorPixelFormat, NSUInteger sampleCount);
     
     inline void setViewportSize(const math::Size2& size);
-    inline void setDrawable(const apple::metal::DrawableRef& ref);
-    inline void setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref);
     
-    void render();
+    void render(const RenderingContext* renderingContext);
     
 private:
     void updateState();
@@ -50,20 +50,10 @@ private:
     apple::metal::LibraryRef _libraryRef;
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
     apple::metal::CommandQueueRef _commandQueueRef;
-    apple::metal::RenderPassDescriptorRef _renderPassDescriptorRef;
-    apple::metal::DrawableRef _drawableRef;
     _internal::Semaphore _inFlightSemaphore;
     math::Size2 _viewportSize;
     
 };
-
-void TriangleWaveRenderer::setRenderPassDescriptor(const apple::metal::RenderPassDescriptorRef& ref) {
-    _renderPassDescriptorRef = ref;
-}
-
-void TriangleWaveRenderer::setDrawable(const apple::metal::DrawableRef& ref) {
-    _drawableRef = ref;
-}
 
 void TriangleWaveRenderer::setViewportSize(const math::Size2& size) {
     _viewportSize = size;

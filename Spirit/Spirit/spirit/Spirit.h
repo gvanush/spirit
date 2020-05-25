@@ -6,17 +6,20 @@
 //  Copyright © 2020 Vanush Grigoryan. All rights reserved.
 //
 
+#import "RenderingContext.h"
+
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
 
-@interface Spirit : NSObject
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, strong) MTLRenderPassDescriptor* _Nullable renderPassDescriptor;
-@property (nonatomic, strong) id<MTLDrawable> _Nullable drawable;
+@interface Spirit : NSObject
 
 -(instancetype _Nonnull ) initWithColorPixelFormat: (MTLPixelFormat) colorPixelFormat sampleCount: (NSUInteger) sampleCount;
 
 -(void) onDrawableSizeChange: (CGSize) drawableSize;
--(void) onDraw;
+-(void) onDraw: (SPRTRenderingContext*) renderingContext;
 
 @end
+
+NS_ASSUME_NONNULL_END

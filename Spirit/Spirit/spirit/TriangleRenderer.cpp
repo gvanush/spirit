@@ -34,10 +34,7 @@ TriangleRenderer::TriangleRenderer(apple::metal::PixelFormat colorPixelFormat) {
     _commandQueueRef = _deviceRef.newCommandQueue();
 }
 
-void TriangleRenderer::render() const {
-    
-    assert(_drawableRef);
-    assert(_renderPassDescriptorRef);
+void TriangleRenderer::render(const RenderingContext* renderingContext) const {
     
     using namespace apple;
     using namespace apple::metal;
@@ -46,7 +43,7 @@ void TriangleRenderer::render() const {
     assert(commandBufferRef);
     commandBufferRef.setLabel(String::createWithUTF8String(u8"MyCommandBuffer"));
     
-    auto commandEncoderRef = commandBufferRef.newRenderCommandEncoder(_renderPassDescriptorRef);
+    auto commandEncoderRef = commandBufferRef.newRenderCommandEncoder(renderingContext->renderpassDescriptor());
     assert(commandEncoderRef);
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
@@ -69,7 +66,7 @@ void TriangleRenderer::render() const {
     
     commandEncoderRef.endEncoding();
     
-    commandBufferRef.present(_drawableRef);
+    commandBufferRef.present(renderingContext->drawable());
     
     commandBufferRef.commit();
       

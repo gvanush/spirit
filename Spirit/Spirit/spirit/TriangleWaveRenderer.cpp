@@ -53,10 +53,7 @@ TriangleWaveRenderer::TriangleWaveRenderer(apple::metal::PixelFormat colorPixelF
     }
 }
 
-void TriangleWaveRenderer::render() {
-    
-    assert(_drawableRef);
-    assert(_renderPassDescriptorRef);
+void TriangleWaveRenderer::render(const RenderingContext* renderingContext) {
     
     using namespace apple;
     
@@ -70,7 +67,7 @@ void TriangleWaveRenderer::render() {
     assert(commandBufferRef);
     commandBufferRef.setLabel(String::createWithUTF8String(u8"MyCommandBuffer"));
     
-    auto commandEncoderRef = commandBufferRef.newRenderCommandEncoder(_renderPassDescriptorRef);
+    auto commandEncoderRef = commandBufferRef.newRenderCommandEncoder(renderingContext->renderpassDescriptor());
     assert(commandEncoderRef);
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
@@ -86,7 +83,7 @@ void TriangleWaveRenderer::render() {
     
     commandEncoderRef.endEncoding();
     
-    commandBufferRef.present(_drawableRef);
+    commandBufferRef.present(renderingContext->drawable());
     
     commandBufferRef.addCompletedHandler([this] (metal::CommandBufferRef commandBuffer) {
         _inFlightSemaphore.notify();

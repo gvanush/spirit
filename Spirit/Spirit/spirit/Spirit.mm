@@ -28,22 +28,12 @@
     return self;
 }
 
--(void) setRenderPassDescriptor: (MTLRenderPassDescriptor*) renderPassDescriptor {
-    _renderPassDescriptor = renderPassDescriptor;
-    scene->setRenderPassDescriptor(apple::metal::RenderPassDescriptorRef {_renderPassDescriptor});
-}
-
--(void) setDrawable: (id<MTLDrawable>) drawable {
-    _drawable = drawable;
-    scene->setDrawable(apple::metal::DrawableRef {_drawable});
-}
-
 -(void) onDrawableSizeChange: (CGSize) drawableSize {
     scene->setViewportSize(spirit::math::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
 }
 
--(void) onDraw {
-    scene->render();
+-(void) onDraw: (SPRTRenderingContext*) renderingContext {
+    scene->render(renderingContext.cpp);
 }
 
 
