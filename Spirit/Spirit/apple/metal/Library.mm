@@ -12,8 +12,8 @@
 
 namespace apple::metal {
 
-FunctionRef LibraryRef::makeFunction(const StringRef& strRef) const {
-    return FunctionRef { [obj<id<MTLLibrary>>() newFunctionWithName: strRef.obj<NSString*>()] };
+FunctionRef LibraryRef::newFunction(const StringRef& name) const {
+    return FunctionRef { [obj<id<MTLLibrary>>() newFunctionWithName: name.obj<NSString*>()] };
 }
 
 }

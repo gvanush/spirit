@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) init;
 
++(id<MTLDevice>) device;
 +(MTLPixelFormat) colorPixelFormat;
 +(NSUInteger) sampleCount;
 
@@ -45,6 +46,9 @@ namespace spirit {
 class RenderingContext {
 public:
     
+    static inline auto device = apple::metal::createSystemDefaultDevice();
+    static inline auto library = device.newDefaultLibrary();
+    static inline auto commandQueue = device.newCommandQueue();
     static constexpr inline auto kColorPixelFormat = apple::metal::PixelFormat::BGRA8Unorm;
     static constexpr inline NSUInteger kSampleCount = 1;
     

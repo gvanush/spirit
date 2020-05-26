@@ -49,6 +49,10 @@
     return self;
 }
 
++(id<MTLDevice>) device {
+    return spirit::RenderingContext::device.obj<id>();
+}
+
 +(MTLPixelFormat) colorPixelFormat {
     return apple::metal::to<MTLPixelFormat>(spirit::RenderingContext::kColorPixelFormat);
 }

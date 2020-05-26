@@ -18,7 +18,7 @@ class ViewController: NSViewController, MTKViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mtkView = MTKView(frame: self.view.bounds, device: MTLCreateSystemDefaultDevice())
+        mtkView = MTKView(frame: self.view.bounds, device: SPRTRenderingContext.device())
         mtkView.autoresizingMask = [.width, .height]
         mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 1.0, 1.0);
         mtkView.colorPixelFormat = SPRTRenderingContext.colorPixelFormat()

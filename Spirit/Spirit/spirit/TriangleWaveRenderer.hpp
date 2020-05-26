@@ -44,10 +44,7 @@ private:
     float _wavePosition;
     NSUInteger _currentBufferIndex;
     
-    apple::metal::DeviceRef _deviceRef;
-    apple::metal::LibraryRef _libraryRef;
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
-    apple::metal::CommandQueueRef _commandQueueRef;
     _internal::Semaphore _inFlightSemaphore;
     math::Size2 _viewportSize;
     

@@ -31,7 +31,7 @@ RenderPipelineStateRef DeviceRef::newRenderPipelineState(const RenderPipelineDes
     }
 }
 
-BufferRef DeviceRef::newBufferWithLength(NSUInteger length, ResourceOptions options) {
+BufferRef DeviceRef::newBufferWithLength(NSUInteger length, ResourceOptions options) const {
     return BufferRef { [obj<id<MTLDevice>>() newBufferWithLength: length options: to<MTLResourceOptions>(options)] };
 }
 

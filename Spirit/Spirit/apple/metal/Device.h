@@ -30,7 +30,7 @@ public:
     
     RenderPipelineStateRef newRenderPipelineState(const RenderPipelineDescriptorRef& descriptorRef, ErrorRef* errorRefPtr) const;
     
-    BufferRef newBufferWithLength(NSUInteger length, ResourceOptions options);
+    BufferRef newBufferWithLength(NSUInteger length, ResourceOptions options) const;
     
 };
 

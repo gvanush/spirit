@@ -19,7 +19,7 @@ class LibraryRef: public ObjectProtocolRef {
 public:
     using ObjectProtocolRef::ObjectProtocolRef;
     
-    FunctionRef makeFunction(const StringRef& strRef) const;
+    FunctionRef newFunction(const StringRef& name) const;
 };
 
 }

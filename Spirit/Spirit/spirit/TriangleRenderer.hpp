@@ -24,11 +24,7 @@ public:
     void render(const RenderingContext* renderingContext);
     
 private:
-    apple::metal::DeviceRef _deviceRef;
-    apple::metal::CommandQueueRef _commandQueueRef;
-    apple::metal::LibraryRef _libraryRef;
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
-    
     math::Size2 _viewportSize;
 };
 
