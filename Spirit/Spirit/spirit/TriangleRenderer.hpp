@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include "Renderer.hpp"
 #include "math/Math.hpp"
 
 #include "../apple/metal/Metal.hpp"
@@ -16,12 +17,12 @@ namespace spirit {
 
 class RenderingContext;
 
-class TriangleRenderer {
+class TriangleRenderer: public Renderer {
 public:
     
     TriangleRenderer();
     
-    void render(const RenderingContext* renderingContext);
+    void render(const RenderingContext* renderingContext) override;
     
 private:
     apple::metal::RenderPipelineStateRef _pipelineStateRef;

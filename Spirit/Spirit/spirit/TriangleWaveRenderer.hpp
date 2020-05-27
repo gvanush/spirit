@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include "Renderer.hpp"
 #include "math/Math.hpp"
 #include "_internal/Semaphore.hpp"
 
@@ -20,12 +21,12 @@ namespace spirit {
 
 class RenderingContext;
 
-class TriangleWaveRenderer {
+class TriangleWaveRenderer: public Renderer {
 public:
     
     TriangleWaveRenderer();
     
-    void render(const RenderingContext* renderingContext);
+    void render(const RenderingContext* renderingContext) override;
     
 private:
     void updateState();

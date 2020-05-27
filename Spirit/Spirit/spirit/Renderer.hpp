@@ -8,14 +8,28 @@
 
 #pragma once
 
+#include "Component.hpp"
+
 namespace spirit {
 
-class Renderer {
+class RenderingContext;
+
+class Renderer: public Component {
 public:
     
-    virtual void render() = 0;
+    Renderer(const Renderer&) = delete;
+    Renderer& operator= (const Renderer&) = delete;
     
-    virtual ~Renderer() {}
+    Renderer(Renderer&&) = delete;
+    Renderer& operator= (Renderer&&) = delete;
+    
+    virtual ~Renderer() = default;
+    
+    virtual void render(const RenderingContext* renderingContext) = 0;
+    
+protected:
+    Renderer() = default;
+    
 };
 
 }

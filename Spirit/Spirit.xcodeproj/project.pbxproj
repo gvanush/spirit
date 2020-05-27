@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7047A97247EF1B600F18D3C /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A95247EF1B600F18D3C /* Component.cpp */; };
+		B7047A98247EF1B600F18D3C /* Component.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A96247EF1B600F18D3C /* Component.hpp */; };
 		B7568A61245FF62C008943BA /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7568A5F245FF62C008943BA /* Geometry.cpp */; };
 		B7568A62245FF62C008943BA /* Geometry.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7568A60245FF62C008943BA /* Geometry.hpp */; };
 		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
@@ -76,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B7047A95247EF1B600F18D3C /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		B7047A96247EF1B600F18D3C /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		B7568A5F245FF62C008943BA /* Geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
 		B7568A60245FF62C008943BA /* Geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Geometry.hpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,10 +321,12 @@
 				B78443F52469C6920098A651 /* TriangleRenderer.hpp */,
 				B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */,
 				B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */,
-				B784444C247C26D80098A651 /* RenderingContext.h */,
-				B784444D247C26D80098A651 /* RenderingContext.mm */,
 				B7844450247C5E5C0098A651 /* Renderer.cpp */,
 				B7844451247C5E5C0098A651 /* Renderer.hpp */,
+				B784444C247C26D80098A651 /* RenderingContext.h */,
+				B784444D247C26D80098A651 /* RenderingContext.mm */,
+				B7047A95247EF1B600F18D3C /* Component.cpp */,
+				B7047A96247EF1B600F18D3C /* Component.hpp */,
 				B7671F482458A7BA0075D52C /* ShaderTypes.h */,
 				B7671F462458A7620075D52C /* Shaders.metal */,
 			);
@@ -368,6 +374,7 @@
 				B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */,
 				B7568A62245FF62C008943BA /* Geometry.hpp in Headers */,
 				B7671F38245744430075D52C /* MetalDrawable.h in Headers */,
+				B7047A98247EF1B600F18D3C /* Component.hpp in Headers */,
 				B784444E247C26D80098A651 /* RenderingContext.h in Headers */,
 				B7671FB7245DA4D00075D52C /* Error.h in Headers */,
 				B7671F86245B51CA0075D52C /* Ref.h in Headers */,
@@ -489,6 +496,7 @@
 				B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */,
 				B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */,
 				B7671FB6245DA4D00075D52C /* Error.mm in Sources */,
+				B7047A97247EF1B600F18D3C /* Component.cpp in Sources */,
 				B7844452247C5E5C0098A651 /* Renderer.cpp in Sources */,
 				B7671F472458A7620075D52C /* Shaders.metal in Sources */,
 				B784444F247C26D80098A651 /* RenderingContext.mm in Sources */,
