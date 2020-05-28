@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "Renderer.hpp"
+#include "Component.hpp"
 #include "math/Math.hpp"
 
 #include "../apple/metal/Metal.hpp"
@@ -17,7 +17,7 @@ namespace spirit {
 
 class RenderingContext;
 
-class TriangleRenderer: public Renderer {
+class TriangleRenderer: public Component<TriangleRenderer> {
 public:
     
     TriangleRenderer();

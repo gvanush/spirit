@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "Renderer.hpp"
+#include "Component.hpp"
 #include "math/Math.hpp"
 #include "_internal/Semaphore.hpp"
 
@@ -21,7 +21,7 @@ namespace spirit {
 
 class RenderingContext;
 
-class TriangleWaveRenderer: public Renderer {
+class TriangleWaveRenderer: public Component<TriangleWaveRenderer> {
 public:
     
     TriangleWaveRenderer();

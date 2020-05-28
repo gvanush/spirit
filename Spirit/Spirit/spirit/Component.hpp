@@ -10,22 +10,42 @@
 
 namespace spirit {
 
-class Component {
+using ComponentTypeId = unsigned int;
+
+namespace _internal {
+
+inline ComponentTypeId createComponentTypeId() {
+    static ComponentTypeId typeId = 0;
+    return ++typeId;
+}
+
+}
+
+class RenderingContext;
+
+class BaseComponent {
 public:
     
-    Component(const Component&) = delete;
-    Component& operator= (const Component&) = delete;
+    BaseComponent(const BaseComponent&) = delete;
+    BaseComponent& operator= (const BaseComponent&) = delete;
     
-    Component(Component&&) = delete;
-    Component& operator= (Component&&) = delete;
+    BaseComponent(BaseComponent&&) = delete;
+    BaseComponent& operator= (BaseComponent&&) = delete;
     
-    virtual ~Component() = default;
+    virtual ~BaseComponent() = default;
     
-    virtual void update() {}
+    virtual void update([[maybe_unused]] float dt) {}
+    
+    virtual void render(const RenderingContext* renderingContext) {}
     
 protected:
-    Component() = default;
-    
+    BaseComponent() = default;
+};
+
+template <typename CT>
+class Component: public BaseComponent {
+public:
+    static inline ComponentTypeId typeId = _internal::createComponentTypeId();
 };
 
 }
