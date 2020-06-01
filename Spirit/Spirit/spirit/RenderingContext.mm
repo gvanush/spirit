@@ -6,7 +6,8 @@
 //  Copyright © 2020 Vanush Grigoryan. All rights reserved.
 //
 
-#import "RenderingContext.h"
+#import "SPRTRenderingContext.h"
+#include "RenderingContext.hpp"
 
 #include <memory>
 

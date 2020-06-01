@@ -12,8 +12,8 @@ import MetalKit
 class ViewController: NSViewController, MTKViewDelegate {
     
     var mtkView: MTKView!
-    var spirit: Spirit!
     var renderingContext: SPRTRenderingContext!
+    var scene = Scene()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,9 @@ class ViewController: NSViewController, MTKViewDelegate {
         
         mtkView.delegate = self
         
-        spirit = Spirit()
-        
         renderingContext = SPRTRenderingContext()
+        
+        scene.load()
     }
 
     override var representedObject: Any? {
@@ -51,7 +51,9 @@ class ViewController: NSViewController, MTKViewDelegate {
         renderingContext.renderPassDescriptor = renderPassDescriptor
         renderingContext.drawable = drawable
         
-        spirit.onDraw(renderingContext)
+        SPRTCore.tick(1.0 / 60.0)
+            
+        SPRTCore.render(renderingContext)
     }
 
 }

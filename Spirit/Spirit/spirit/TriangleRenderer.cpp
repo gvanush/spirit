@@ -8,7 +8,7 @@
 
 #include "TriangleRenderer.hpp"
 #include "ShaderTypes.h"
-#include "RenderingContext.h"
+#include "RenderingContext.hpp"
 
 namespace spirit {
 

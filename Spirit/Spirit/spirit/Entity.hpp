@@ -31,7 +31,7 @@ public:
     
     template <class CT>
     CT* addComponent() {
-        static_assert(std::is_base_of_v<Component<CT>, Component>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
+        static_assert(std::is_base_of_v<Component<CT>, CT>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
         const auto& res = _components.try_emplace(CT::typeId, std::make_unique<CT>());
         assert(res.second); // Entity already has a component with type 'CT'
         return static_cast<CT*>(res.first->second.get());
@@ -39,14 +39,14 @@ public:
     
     template <class CT>
     CT* getComponent() const {
-        static_assert(std::is_base_of_v<Component<CT>, Component>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
+        static_assert(std::is_base_of_v<Component<CT>, CT>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
         auto it = _components.find(CT::typeId);
         return (it == _components.end() ? nullptr : static_cast<CT*>(it->second.get()));
     }
     
     template <class CT>
     void removeComponent() {
-        static_assert(std::is_base_of_v<Component<CT>, Component>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
+        static_assert(std::is_base_of_v<Component<CT>, CT>, "Each component type 'CT' must inherit from 'spirit::Component<CT>' type");
         _components.erase(CT::typeId);
     }
     

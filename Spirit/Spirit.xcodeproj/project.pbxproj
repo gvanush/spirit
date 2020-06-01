@@ -12,6 +12,7 @@
 		B7047A9B247F978F00F18D3C /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A99247F978F00F18D3C /* Entity.cpp */; };
 		B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A9D247F9DA200F18D3C /* Core.cpp */; };
 		B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A9E247F9DA200F18D3C /* Core.hpp */; };
+		B7047AA624857E2400F18D3C /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7047AA524857E2400F18D3C /* Scene.mm */; };
 		B7568A61245FF62C008943BA /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7568A5F245FF62C008943BA /* Geometry.cpp */; };
 		B7568A62245FF62C008943BA /* Geometry.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7568A60245FF62C008943BA /* Geometry.hpp */; };
 		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
@@ -29,8 +30,7 @@
 		B7671F32245743AE0075D52C /* Drawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F30245743AE0075D52C /* Drawable.mm */; };
 		B7671F37245744430075D52C /* MetalDrawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F35245744430075D52C /* MetalDrawable.mm */; };
 		B7671F38245744430075D52C /* MetalDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F36245744430075D52C /* MetalDrawable.h */; };
-		B7671F3C2457492D0075D52C /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671F3A2457492D0075D52C /* Scene.cpp */; };
-		B7671F42245766630075D52C /* Spirit.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F40245766630075D52C /* Spirit.mm */; };
+		B7671F42245766630075D52C /* SPRTCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F40245766630075D52C /* SPRTCore.mm */; };
 		B7671F472458A7620075D52C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F482458A7BA0075D52C /* ShaderTypes.h */; };
 		B7671F4D2458B4440075D52C /* Vec2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671F4B2458B4440075D52C /* Vec2.cpp */; };
@@ -47,7 +47,7 @@
 		B7671F9F245CA1920075D52C /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F9D245CA1920075D52C /* Object.h */; };
 		B7671FA2245D544C0075D52C /* ObjectProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA0245D544C0075D52C /* ObjectProtocol.mm */; };
 		B7671FA3245D544C0075D52C /* ObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671FA1245D544C0075D52C /* ObjectProtocol.h */; };
-		B7671FA6245D72910075D52C /* MyCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA4245D72910075D52C /* MyCpp.cpp */; };
+		B7671FA6245D72910075D52C /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA4245D72910075D52C /* Scene.cpp */; };
 		B7671FA7245D79310075D52C /* RenderPipelineDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F94245B68A70075D52C /* RenderPipelineDescriptor.mm */; };
 		B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */; };
 		B7671FB2245D9B6F0075D52C /* RenderPipelineState.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FB0245D9B6F0075D52C /* RenderPipelineState.mm */; };
@@ -62,7 +62,7 @@
 		B78444032469DDE50098A651 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B78444012469DDE50098A651 /* Buffer.h */; };
 		B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */; };
 		B78444452479BDD10098A651 /* PipelineBufferDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */; };
-		B784444E247C26D80098A651 /* RenderingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B784444C247C26D80098A651 /* RenderingContext.h */; };
+		B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B784444C247C26D80098A651 /* SPRTRenderingContext.h */; };
 		B784444F247C26D80098A651 /* RenderingContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784444D247C26D80098A651 /* RenderingContext.mm */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +85,11 @@
 		B7047A9A247F978F00F18D3C /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		B7047A9D247F9DA200F18D3C /* Core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
 		B7047A9E247F9DA200F18D3C /* Core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
+		B7047AA12485735A00F18D3C /* RenderingContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RenderingContext.hpp; sourceTree = "<group>"; };
+		B7047AA22485782400F18D3C /* Spirit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Spirit.hpp; sourceTree = "<group>"; };
+		B7047AA3248578DE00F18D3C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
+		B7047AA424857E2400F18D3C /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B7047AA524857E2400F18D3C /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
 		B7568A5F245FF62C008943BA /* Geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
 		B7568A60245FF62C008943BA /* Geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Geometry.hpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +117,8 @@
 		B7671F31245743AE0075D52C /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
 		B7671F35245744430075D52C /* MetalDrawable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalDrawable.mm; sourceTree = "<group>"; };
 		B7671F36245744430075D52C /* MetalDrawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalDrawable.h; sourceTree = "<group>"; };
-		B7671F3A2457492D0075D52C /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		B7671F3B2457492D0075D52C /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
-		B7671F3F245766630075D52C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
-		B7671F40245766630075D52C /* Spirit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Spirit.mm; sourceTree = "<group>"; };
+		B7671F3F245766630075D52C /* SPRTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTCore.h; sourceTree = "<group>"; };
+		B7671F40245766630075D52C /* SPRTCore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SPRTCore.mm; sourceTree = "<group>"; };
 		B7671F462458A7620075D52C /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		B7671F482458A7BA0075D52C /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		B7671F4B2458B4440075D52C /* Vec2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vec2.cpp; sourceTree = "<group>"; };
@@ -140,8 +143,8 @@
 		B7671F9D245CA1920075D52C /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		B7671FA0245D544C0075D52C /* ObjectProtocol.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectProtocol.mm; sourceTree = "<group>"; };
 		B7671FA1245D544C0075D52C /* ObjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectProtocol.h; sourceTree = "<group>"; };
-		B7671FA4245D72910075D52C /* MyCpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyCpp.cpp; sourceTree = "<group>"; };
-		B7671FA5245D72910075D52C /* MyCpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyCpp.hpp; sourceTree = "<group>"; };
+		B7671FA4245D72910075D52C /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		B7671FA5245D72910075D52C /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPipelineColorAttachmentDescriptor.mm; sourceTree = "<group>"; };
 		B7671FA9245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPipelineColorAttachmentDescriptor.h; sourceTree = "<group>"; };
 		B7671FAD245D85F40075D52C /* PixelFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelFormat.h; sourceTree = "<group>"; };
@@ -164,7 +167,7 @@
 		B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptor.mm; sourceTree = "<group>"; };
 		B78444442479BDD10098A651 /* PipelineBufferDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptor.h; sourceTree = "<group>"; };
 		B7844449247B0C430098A651 /* Semaphore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Semaphore.hpp; sourceTree = "<group>"; };
-		B784444C247C26D80098A651 /* RenderingContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderingContext.h; sourceTree = "<group>"; };
+		B784444C247C26D80098A651 /* SPRTRenderingContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTRenderingContext.h; sourceTree = "<group>"; };
 		B784444D247C26D80098A651 /* RenderingContext.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderingContext.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,8 +229,10 @@
 				B7671EE0244D85F30075D52C /* Info.plist */,
 				B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */,
 				B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */,
-				B7671FA4245D72910075D52C /* MyCpp.cpp */,
-				B7671FA5245D72910075D52C /* MyCpp.hpp */,
+				B7047AA424857E2400F18D3C /* Scene.h */,
+				B7047AA524857E2400F18D3C /* Scene.mm */,
+				B7671FA4245D72910075D52C /* Scene.cpp */,
+				B7671FA5245D72910075D52C /* Scene.hpp */,
 			);
 			path = Spirit_macOS;
 			sourceTree = "<group>";
@@ -316,20 +321,21 @@
 			children = (
 				B7844447247B0C2B0098A651 /* _internal */,
 				B7671F4A2458B4220075D52C /* math */,
-				B7671F3F245766630075D52C /* Spirit.h */,
-				B7671F40245766630075D52C /* Spirit.mm */,
-				B7671F3A2457492D0075D52C /* Scene.cpp */,
-				B7671F3B2457492D0075D52C /* Scene.hpp */,
+				B7047AA22485782400F18D3C /* Spirit.hpp */,
+				B7047AA3248578DE00F18D3C /* Spirit.h */,
 				B7047A9D247F9DA200F18D3C /* Core.cpp */,
 				B7047A9E247F9DA200F18D3C /* Core.hpp */,
+				B7671F3F245766630075D52C /* SPRTCore.h */,
+				B7671F40245766630075D52C /* SPRTCore.mm */,
+				B7047AA12485735A00F18D3C /* RenderingContext.hpp */,
+				B784444C247C26D80098A651 /* SPRTRenderingContext.h */,
+				B784444D247C26D80098A651 /* RenderingContext.mm */,
 				B7047A99247F978F00F18D3C /* Entity.cpp */,
 				B7047A9A247F978F00F18D3C /* Entity.hpp */,
 				B78443F42469C6920098A651 /* TriangleRenderer.cpp */,
 				B78443F52469C6920098A651 /* TriangleRenderer.hpp */,
 				B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */,
 				B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */,
-				B784444C247C26D80098A651 /* RenderingContext.h */,
-				B784444D247C26D80098A651 /* RenderingContext.mm */,
 				B7047A95247EF1B600F18D3C /* Component.cpp */,
 				B7047A96247EF1B600F18D3C /* Component.hpp */,
 				B7671F482458A7BA0075D52C /* ShaderTypes.h */,
@@ -380,7 +386,7 @@
 				B7568A62245FF62C008943BA /* Geometry.hpp in Headers */,
 				B7671F38245744430075D52C /* MetalDrawable.h in Headers */,
 				B7047A98247EF1B600F18D3C /* Component.hpp in Headers */,
-				B784444E247C26D80098A651 /* RenderingContext.h in Headers */,
+				B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */,
 				B7671FB7245DA4D00075D52C /* Error.h in Headers */,
 				B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */,
 				B7671F86245B51CA0075D52C /* Ref.h in Headers */,
@@ -492,9 +498,8 @@
 				B7671F32245743AE0075D52C /* Drawable.mm in Sources */,
 				B7671F37245744430075D52C /* MetalDrawable.mm in Sources */,
 				B7671F1E2455EB550075D52C /* CommandBuffer.mm in Sources */,
-				B7671F3C2457492D0075D52C /* Scene.cpp in Sources */,
 				B7671F512458B4E20075D52C /* Vec4.cpp in Sources */,
-				B7671F42245766630075D52C /* Spirit.mm in Sources */,
+				B7671F42245766630075D52C /* SPRTCore.mm in Sources */,
 				B78443FE2469DD4C0098A651 /* Resource.mm in Sources */,
 				B7671F9A245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm in Sources */,
 				B7671F92245B64630075D52C /* Function.mm in Sources */,
@@ -529,9 +534,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7568A662460823B008943BA /* Shaders.metal in Sources */,
-				B7671FA6245D72910075D52C /* MyCpp.cpp in Sources */,
+				B7671FA6245D72910075D52C /* Scene.cpp in Sources */,
 				B7671EDA244D85F20075D52C /* ViewController.swift in Sources */,
 				B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */,
+				B7047AA624857E2400F18D3C /* Scene.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

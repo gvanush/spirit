@@ -1,39 +1,10 @@
 //
-//  RenderingContext.h
+//  RenderingContext.hpp
 //  Spirit
 //
-//  Created by Vanush Grigoryan on 5/25/20.
+//  Created by Vanush Grigoryan on 6/1/20.
 //  Copyright © 2020 Vanush Grigoryan. All rights reserved.
 //
-
-#ifdef __OBJC__
-
-#import <Foundation/Foundation.h>
-#import <Metal/Metal.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface SPRTRenderingContext : NSObject
-
-@property (nonatomic, strong) id<MTLDrawable> drawable;
-@property (nonatomic) CGSize drawableSize;
-@property (nonatomic, strong) MTLRenderPassDescriptor* renderPassDescriptor;
-
--(instancetype) init;
-
-+(id<MTLDevice>) device;
-+(MTLPixelFormat) colorPixelFormat;
-+(NSUInteger) sampleCount;
-
-@end
-
-NS_ASSUME_NONNULL_END
-
-#endif
-
-
-
-#ifdef __cplusplus
 
 #pragma once
 
@@ -92,17 +63,3 @@ const apple::metal::RenderPassDescriptorRef& RenderingContext::renderpassDescrip
 }
 
 }
-
-#endif
-
-
-
-#if defined(__OBJC__) && defined(__cplusplus)
-
-@interface SPRTRenderingContext (Cpp)
-
--(spirit::RenderingContext* _Nonnull) cpp;
-
-@end
-
-#endif
