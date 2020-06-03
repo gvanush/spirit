@@ -17,11 +17,11 @@
 namespace apple::metal {
 
 enum class PrimitiveType: NSUInteger {
-    Point = 0,
-    Line = 1,
-    LineStrip = 2,
-    Triangle = 3,
-    TriangleStrip = 4,
+    point = 0,
+    line = 1,
+    lineStrip = 2,
+    triangle = 3,
+    triangleStrip = 4,
 } API_AVAILABLE(macos(10.11), ios(8.0));
 
 struct Viewport {

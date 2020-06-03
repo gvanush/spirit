@@ -9,6 +9,7 @@
 #pragma once
 
 #include "Component.hpp"
+
 #include "math/Math.hpp"
 
 #include "../apple/metal/Metal.hpp"

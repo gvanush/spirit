@@ -22,45 +22,45 @@
 namespace apple::metal {
 
 enum class CPUCacheMode: NSUInteger {
-    DefaultCache = 0,
-    WriteCombined = 1,
+    defaultCache = 0,
+    writeCombined = 1,
 } API_AVAILABLE(macos(10.11), ios(8.0));
 
 enum class StorageMode: NSUInteger {
-    Shared  = 0,
-    Managed API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios) = 1,
-    Private = 2,
-    Memoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = 3,
+    shared  = 0,
+    managed API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios) = 1,
+    private_ = 2,
+    memoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = 3,
 } API_AVAILABLE(macos(10.11), ios(9.0));
 
 enum class HazardTrackingMode: NSUInteger {
-    Default = 0,
-    Untracked = 1,
-    Tracked = 2,
+    default_ = 0,
+    untracked = 1,
+    tracked = 2,
 } API_AVAILABLE(macos(10.15), ios(13.0));
 
-constexpr NSUInteger ResourceCPUCacheModeShift = 0;
-constexpr NSUInteger ResourceCPUCacheModeMask = (0xfUL << ResourceCPUCacheModeShift);
+constexpr NSUInteger kResourceCPUCacheModeShift = 0;
+constexpr NSUInteger kResourceCPUCacheModeMask = (0xfUL << kResourceCPUCacheModeShift);
 
-constexpr NSUInteger ResourceStorageModeShift = 4;
-constexpr NSUInteger ResourceStorageModeMask = (0xfUL << ResourceStorageModeShift);
+constexpr NSUInteger kResourceStorageModeShift = 4;
+constexpr NSUInteger kResourceStorageModeMask = (0xfUL << kResourceStorageModeShift);
 
-constexpr NSUInteger ResourceHazardTrackingModeShift = 8;
-constexpr NSUInteger ResourceHazardTrackingModeMask = (0x3UL << ResourceHazardTrackingModeShift);
+constexpr NSUInteger kResourceHazardTrackingModeShift = 8;
+constexpr NSUInteger kResourceHazardTrackingModeMask = (0x3UL << kResourceHazardTrackingModeShift);
 
 enum class ResourceOptions: NSUInteger
 {
-    CPUCacheModeDefaultCache  = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::DefaultCache)  << ResourceCPUCacheModeShift,
-    CPUCacheModeWriteCombined = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::WriteCombined) << ResourceCPUCacheModeShift,
+    CPUCacheModeDefaultCache  = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::defaultCache)  << kResourceCPUCacheModeShift,
+    CPUCacheModeWriteCombined = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::writeCombined) << kResourceCPUCacheModeShift,
 
-    StorageModeShared     API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::Shared)     << ResourceStorageModeShift,
-    StorageModeManaged    API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios)   = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::Managed)    << ResourceStorageModeShift,
-    StorageModePrivate    API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::Private)    << ResourceStorageModeShift,
-    StorageModeMemoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::Memoryless) << ResourceStorageModeShift,
+    StorageModeShared     API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::shared)     << kResourceStorageModeShift,
+    StorageModeManaged    API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios)   = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::managed)    << kResourceStorageModeShift,
+    StorageModePrivate    API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::private_)    << kResourceStorageModeShift,
+    StorageModeMemoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::memoryless) << kResourceStorageModeShift,
     
-    HazardTrackingModeDefault API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::Default) << ResourceHazardTrackingModeShift,
-    HazardTrackingModeUntracked API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::Untracked) << ResourceHazardTrackingModeShift,
-    HazardTrackingModeTracked API_AVAILABLE(macos(10.15), ios(13.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::Tracked) << ResourceHazardTrackingModeShift,
+    HazardTrackingModeDefault API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::default_) << kResourceHazardTrackingModeShift,
+    HazardTrackingModeUntracked API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::untracked) << kResourceHazardTrackingModeShift,
+    HazardTrackingModeTracked API_AVAILABLE(macos(10.15), ios(13.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::tracked) << kResourceHazardTrackingModeShift,
     
     // Deprecated spellings
     OptionCPUCacheModeDefault       = CPUCacheModeDefaultCache,

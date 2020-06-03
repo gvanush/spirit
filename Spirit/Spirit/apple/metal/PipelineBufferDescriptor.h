@@ -13,9 +13,9 @@
 namespace apple::metal {
 
 enum class Mutability: NSUInteger {
-    Default     = 0,
-    Mutable     = 1,
-    Immutable   = 2,
+    default_     = 0,
+    mutable_     = 1,
+    immutable   = 2,
 } API_AVAILABLE(macos(10.13), ios(11.0));
 
 class PipelineBufferDescriptorRef: public ObjectRef {

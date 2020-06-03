@@ -20,7 +20,7 @@ public:
     static inline auto device = apple::metal::createSystemDefaultDevice();
     static inline auto library = device.newDefaultLibrary();
     static inline auto commandQueue = device.newCommandQueue();
-    static constexpr inline auto kColorPixelFormat = apple::metal::PixelFormat::BGRA8Unorm;
+    static constexpr inline auto kColorPixelFormat = apple::metal::PixelFormat::bgra8Unorm;
     static constexpr inline NSUInteger kSampleCount = 1;
     
     inline void setDrawable(const apple::metal::DrawableRef& drawable);

@@ -65,7 +65,7 @@ void TriangleRenderer::render(const RenderingContext* renderingContext) {
     
     commandEncoderRef.setVertexBytes(&_viewportSize, sizeof(_viewportSize), kVertexInputIndexViewportSize);
 
-    commandEncoderRef.drawPrimitives(PrimitiveType::Triangle, 0, 3);
+    commandEncoderRef.drawPrimitives(PrimitiveType::triangle, 0, 3);
     
     commandEncoderRef.endEncoding();
     

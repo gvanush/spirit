@@ -38,7 +38,7 @@ TriangleWaveRenderer::TriangleWaveRenderer()
     pipelineStateDescriptorRef.setFragmentFunction(fragmentFunctionRef);
     pipelineStateDescriptorRef.setSampleCount(RenderingContext::kSampleCount);
     pipelineStateDescriptorRef.colorAttachments().objectAtIndex(0).setPixelFormat(RenderingContext::kColorPixelFormat);
-    pipelineStateDescriptorRef.vertexBuffers().objectAtIndex(kVertexInputIndexVertices).setMutability(metal::Mutability::Immutable);
+    pipelineStateDescriptorRef.vertexBuffers().objectAtIndex(kVertexInputIndexVertices).setMutability(metal::Mutability::immutable);
     
     const auto& device = RenderingContext::device;
     
@@ -81,7 +81,7 @@ void TriangleWaveRenderer::render(const RenderingContext* renderingContext) {
     
     commandEncoderRef.setVertexBytes(&_viewportSize, sizeof(_viewportSize), kVertexInputIndexViewportSize);
     
-    commandEncoderRef.drawPrimitives(metal::PrimitiveType::Triangle, 0, kTriangleCount * kTriangleVertexCount);
+    commandEncoderRef.drawPrimitives(metal::PrimitiveType::triangle, 0, kTriangleCount * kTriangleVertexCount);
     
     commandEncoderRef.endEncoding();
     
