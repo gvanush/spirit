@@ -9,11 +9,11 @@
 #pragma once
 
 #include "Component.hpp"
-#include "math/Math.hpp"
+#include "Math.hpp"
+
 #include "_internal/Semaphore.hpp"
 
 #include "../apple/metal/Metal.hpp"
-
 
 #include <array>
 
@@ -33,8 +33,8 @@ private:
     void generateTriangles();
     
     struct Triangle {
-        math::Vec2 position;
-        math::Vec4 color;
+        Vec2 position;
+        Vec4 color;
     };
     
     static constexpr int kTriangleCount = 1000;
@@ -47,7 +47,7 @@ private:
     
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
     _internal::Semaphore _inFlightSemaphore;
-    math::Size2 _viewportSize;
+    Size2 _viewportSize;
     
 };
 

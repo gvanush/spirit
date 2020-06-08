@@ -9,7 +9,6 @@
 #pragma once
 
 namespace spirit {
-namespace math {
 
 struct Vec2 {
     float x;
@@ -31,5 +30,4 @@ inline Vec2 operator+ (Vec2 lhs, Vec2 rhs) {
     return Vec2 {lhs.x + rhs.x, lhs.y + rhs.y};
 }
 
-}
 }

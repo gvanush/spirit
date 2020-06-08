@@ -7,7 +7,6 @@
 //
 
 namespace spirit {
-namespace math {
 
 struct Vec4 {
     float x;
@@ -27,5 +26,4 @@ struct Vec4 {
     
 };
 
-}
 }

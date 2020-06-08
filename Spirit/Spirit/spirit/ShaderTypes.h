@@ -1,6 +1,6 @@
 #pragma once
 
-#include "math/Math.hpp"
+#include "Math.hpp"
 
 namespace spirit {
 
@@ -10,8 +10,8 @@ enum VertexInputIndex: unsigned int {
 };
 
 struct Vertex {
-    math::Vec2 position;
-    math::Vec4 color;
+    Vec2 position;
+    Vec4 color;
 };
 
 }

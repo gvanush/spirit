@@ -135,7 +135,7 @@ void TriangleWaveRenderer::updateState() {
 
 void TriangleWaveRenderer::generateTriangles() {
     
-    constexpr std::array<math::Vec4, 6> Colors = {{
+    constexpr std::array<Vec4, 6> Colors = {{
         { 1.0, 0.0, 0.0, 1.0 },  // Red
         { 0.0, 1.0, 0.0, 1.0 },  // Green
         { 0.0, 0.0, 1.0, 1.0 },  // Blue

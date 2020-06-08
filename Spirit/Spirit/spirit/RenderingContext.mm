@@ -28,7 +28,7 @@
 }
 
 -(void) setDrawableSize: (CGSize) drawableSize {
-    _cpp->setDrawableSize(spirit::math::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
+    _cpp->setDrawableSize(spirit::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
 }
 
 -(CGSize) drawableSize {

@@ -1,6 +1,14 @@
-#include <metal_stdlib>
+//
+//  Shaders.metal
+//  Spirit
+//
+//  Created by Vanush Grigoryan on 6/1/20.
+//  Copyright © 2020 Vanush Grigoryan. All rights reserved.
+//
 
-#include "math/Math.hpp"
+#include "Math.hpp"
+
+#include <metal_stdlib>
 
 using namespace metal;
 
@@ -25,7 +33,7 @@ typedef struct
 vertex RasterizerData
 vertexShader(uint vertexID [[vertex_id]],
              constant spirit::Vertex* vertices [[buffer(spirit::kVertexInputIndexVertices)]],
-             constant spirit::math::Size2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
+             constant spirit::Size2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
 {
     RasterizerData out;
 

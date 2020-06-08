@@ -9,7 +9,6 @@
 #pragma once
 
 namespace spirit {
-namespace math {
 
 struct Size2 {
     float width;
@@ -26,5 +25,4 @@ struct Size2 {
 #endif
 };
 
-}
 }
