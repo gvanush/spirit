@@ -9,13 +9,13 @@
 #pragma once
 
 #include "Component.hpp"
-#include "Math.hpp"
 
 #include "_internal/Semaphore.hpp"
 
 #include "../apple/metal/Metal.hpp"
 
 #include <array>
+#include <simd/simd.h>
 
 namespace spirit {
 
@@ -33,8 +33,8 @@ private:
     void generateTriangles();
     
     struct Triangle {
-        Vec2 position;
-        Vec4 color;
+        simd::float2 position;
+        simd::float4 color;
     };
     
     static constexpr int kTriangleCount = 1000;
@@ -47,7 +47,7 @@ private:
     
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
     _internal::Semaphore _inFlightSemaphore;
-    Size2 _viewportSize;
+    simd::float2 _viewportSize;
     
 };
 

@@ -13,9 +13,6 @@
 		B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A9D247F9DA200F18D3C /* Core.cpp */; };
 		B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A9E247F9DA200F18D3C /* Core.hpp */; };
 		B7047AA624857E2400F18D3C /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7047AA524857E2400F18D3C /* Scene.mm */; };
-		B7047AB1248EBBF400F18D3C /* Vec2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047AAA248EBBF400F18D3C /* Vec2.cpp */; };
-		B7047AB5248EBBF400F18D3C /* Vec4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047AAE248EBBF400F18D3C /* Vec4.cpp */; };
-		B7047AB7248EBBF400F18D3C /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047AB0248EBBF400F18D3C /* Geometry.cpp */; };
 		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED7244D85F20075D52C /* AppDelegate.swift */; };
 		B7671EDA244D85F20075D52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED9244D85F20075D52C /* ViewController.swift */; };
@@ -87,13 +84,6 @@
 		B7047AA3248578DE00F18D3C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
 		B7047AA424857E2400F18D3C /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		B7047AA524857E2400F18D3C /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
-		B7047AAA248EBBF400F18D3C /* Vec2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec2.cpp; sourceTree = "<group>"; };
-		B7047AAB248EBBF400F18D3C /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
-		B7047AAC248EBBF400F18D3C /* Vec2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec2.hpp; sourceTree = "<group>"; };
-		B7047AAD248EBBF400F18D3C /* Vec4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec4.hpp; sourceTree = "<group>"; };
-		B7047AAE248EBBF400F18D3C /* Vec4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec4.cpp; sourceTree = "<group>"; };
-		B7047AAF248EBBF400F18D3C /* Geometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Geometry.hpp; sourceTree = "<group>"; };
-		B7047AB0248EBBF400F18D3C /* Geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED5244D85F20075D52C /* Spirit_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirit_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED7244D85F20075D52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,20 +204,6 @@
 				B7047A96247EF1B600F18D3C /* Component.hpp */,
 			);
 			name = core;
-			sourceTree = "<group>";
-		};
-		B7047AA9248EBBB000F18D3C /* math */ = {
-			isa = PBXGroup;
-			children = (
-				B7047AB0248EBBF400F18D3C /* Geometry.cpp */,
-				B7047AAF248EBBF400F18D3C /* Geometry.hpp */,
-				B7047AAA248EBBF400F18D3C /* Vec2.cpp */,
-				B7047AAC248EBBF400F18D3C /* Vec2.hpp */,
-				B7047AAE248EBBF400F18D3C /* Vec4.cpp */,
-				B7047AAD248EBBF400F18D3C /* Vec4.hpp */,
-				B7047AAB248EBBF400F18D3C /* Math.hpp */,
-			);
-			name = math;
 			sourceTree = "<group>";
 		};
 		B7671EBA244D7DC80075D52C = {
@@ -360,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				B7047AA8248EBB1500F18D3C /* core */,
-				B7047AA9248EBBB000F18D3C /* math */,
 				B7047AA7248EBAE600F18D3C /* renderers */,
 				B7047AA22485782400F18D3C /* Spirit.hpp */,
 				B7047AA3248578DE00F18D3C /* Spirit.h */,
@@ -503,7 +478,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7671F9E245CA1920075D52C /* Object.mm in Sources */,
-				B7047AB7248EBBF400F18D3C /* Geometry.cpp in Sources */,
 				B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */,
 				B7671F8D245B54130075D52C /* String.mm in Sources */,
 				B7671F32245743AE0075D52C /* Drawable.mm in Sources */,
@@ -512,7 +486,6 @@
 				B7671F42245766630075D52C /* SPRTCore.mm in Sources */,
 				B78443FE2469DD4C0098A651 /* Resource.mm in Sources */,
 				B7671F9A245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm in Sources */,
-				B7047AB1248EBBF400F18D3C /* Vec2.cpp in Sources */,
 				B7671F92245B64630075D52C /* Function.mm in Sources */,
 				B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */,
 				B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */,
@@ -521,7 +494,6 @@
 				B7671F472458A7620075D52C /* Shaders.metal in Sources */,
 				B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */,
 				B784444F247C26D80098A651 /* RenderingContext.mm in Sources */,
-				B7047AB5248EBBF400F18D3C /* Vec4.cpp in Sources */,
 				B7671F1A2455E6A80075D52C /* CommandQueue.mm in Sources */,
 				B7671FB2245D9B6F0075D52C /* RenderPipelineState.mm in Sources */,
 				B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */,

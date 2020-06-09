@@ -9,9 +9,10 @@
 #pragma once
 
 #include "Component.hpp"
-#include "Math.hpp"
 
 #include "../apple/metal/Metal.hpp"
+
+#include <simd/simd.h>
 
 namespace spirit {
 
@@ -26,7 +27,7 @@ public:
     
 private:
     apple::metal::RenderPipelineStateRef _pipelineStateRef;
-    Size2 _viewportSize;
+    simd::float2 _viewportSize;
 };
 
 }

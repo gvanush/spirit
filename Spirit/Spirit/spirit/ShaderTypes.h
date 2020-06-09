@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Math.hpp"
+#include <simd/simd.h>
 
 namespace spirit {
 
@@ -10,8 +10,8 @@ enum VertexInputIndex: unsigned int {
 };
 
 struct Vertex {
-    Vec2 position;
-    Vec4 color;
+    simd::float2 position;
+    simd::float4 color;
 };
 
 }

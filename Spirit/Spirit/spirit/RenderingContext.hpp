@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include "Math.hpp"
-
 #include "../apple/metal/Metal.hpp"
+
+#include <simd/simd.h>
 
 namespace spirit {
 
@@ -26,8 +26,8 @@ public:
     inline void setDrawable(const apple::metal::DrawableRef& drawable);
     inline const apple::metal::DrawableRef& drawable() const;
     
-    inline void setDrawableSize(const Size2& ds);
-    inline const Size2& drawableSize() const;
+    inline void setDrawableSize(const simd::float2& ds);
+    inline const simd::float2& drawableSize() const;
     
     inline void setRenderpassDescriptor(const apple::metal::RenderPassDescriptorRef& rpd);
     inline const apple::metal::RenderPassDescriptorRef& renderpassDescriptor() const;
@@ -35,7 +35,7 @@ public:
 private:
     apple::metal::DrawableRef _drawable;
     apple::metal::RenderPassDescriptorRef _renderPassDescriptor;
-    Size2 _drawableSize;
+    simd::float2 _drawableSize;
 };
 
 void RenderingContext::setDrawable(const apple::metal::DrawableRef& drawable) {
@@ -46,11 +46,11 @@ const apple::metal::DrawableRef& RenderingContext::drawable() const {
     return _drawable;
 }
 
-void RenderingContext::setDrawableSize(const Size2& ds) {
+void RenderingContext::setDrawableSize(const simd::float2& ds) {
     _drawableSize = ds;
 }
 
-const Size2& RenderingContext::drawableSize() const {
+const simd::float2& RenderingContext::drawableSize() const {
     return _drawableSize;
 }
 

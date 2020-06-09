@@ -73,7 +73,7 @@ void TriangleWaveRenderer::render(const RenderingContext* renderingContext) {
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
     _viewportSize = renderingContext->drawableSize();
-    commandEncoderRef.setViewport(metal::Viewport {0.0, 0.0, _viewportSize.width, _viewportSize.height, 0.0, 1.0});
+    commandEncoderRef.setViewport(metal::Viewport {0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0});
     
     commandEncoderRef.setRenderPipelineState(_pipelineStateRef);
     
@@ -135,7 +135,7 @@ void TriangleWaveRenderer::updateState() {
 
 void TriangleWaveRenderer::generateTriangles() {
     
-    constexpr std::array<Vec4, 6> Colors = {{
+    constexpr std::array<simd::float4, 6> Colors = {{
         { 1.0, 0.0, 0.0, 1.0 },  // Red
         { 0.0, 1.0, 0.0, 1.0 },  // Green
         { 0.0, 0.0, 1.0, 1.0 },  // Blue

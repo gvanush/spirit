@@ -50,7 +50,7 @@ void TriangleRenderer::render(const RenderingContext* renderingContext) {
     commandEncoderRef.setLabel(String::createWithUTF8String(u8"MyRenderEncoder"));
     
     _viewportSize = renderingContext->drawableSize();
-    commandEncoderRef.setViewport(Viewport {0.0, 0.0, _viewportSize.width, _viewportSize.height, 0.0, 1.0});
+    commandEncoderRef.setViewport(Viewport {0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0});
     
     commandEncoderRef.setRenderPipelineState(_pipelineStateRef);
     

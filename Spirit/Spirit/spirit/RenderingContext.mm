@@ -28,11 +28,11 @@
 }
 
 -(void) setDrawableSize: (CGSize) drawableSize {
-    _cpp->setDrawableSize(spirit::Size2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
+    _cpp->setDrawableSize(simd::float2 {static_cast<float>(drawableSize.width), static_cast<float>(drawableSize.height)});
 }
 
 -(CGSize) drawableSize {
-    return CGSizeMake(_cpp->drawableSize().width, _cpp->drawableSize().height);
+    return CGSizeMake(_cpp->drawableSize().x, _cpp->drawableSize().y);
 }
 
 -(void) setRenderPassDescriptor: (MTLRenderPassDescriptor*) renderPassDescriptor {

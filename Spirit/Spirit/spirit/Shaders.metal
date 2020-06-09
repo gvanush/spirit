@@ -6,8 +6,6 @@
 //  Copyright © 2020 Vanush Grigoryan. All rights reserved.
 //
 
-#include "Math.hpp"
-
 #include <metal_stdlib>
 
 using namespace metal;
@@ -33,7 +31,7 @@ typedef struct
 vertex RasterizerData
 vertexShader(uint vertexID [[vertex_id]],
              constant spirit::Vertex* vertices [[buffer(spirit::kVertexInputIndexVertices)]],
-             constant spirit::Size2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
+             constant float2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
 {
     RasterizerData out;
 
