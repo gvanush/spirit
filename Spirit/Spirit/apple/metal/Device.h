@@ -32,6 +32,8 @@ public:
     
     BufferRef newBufferWithLength(NSUInteger length, ResourceOptions options) const;
     
+    BufferRef newBufferWithBytes(const void* pointer, NSUInteger length, ResourceOptions options) const;
+    
 };
 
 DeviceRef createSystemDefaultDevice();

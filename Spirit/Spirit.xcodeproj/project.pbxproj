@@ -13,6 +13,9 @@
 		B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A9D247F9DA200F18D3C /* Core.cpp */; };
 		B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A9E247F9DA200F18D3C /* Core.hpp */; };
 		B7047AA624857E2400F18D3C /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7047AA524857E2400F18D3C /* Scene.mm */; };
+		B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */; };
+		B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */; };
+		B729455524AB216900691DD4 /* EnumBitMaskOperators.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */; };
 		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED7244D85F20075D52C /* AppDelegate.swift */; };
 		B7671EDA244D85F20075D52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED9244D85F20075D52C /* ViewController.swift */; };
@@ -84,6 +87,10 @@
 		B7047AA3248578DE00F18D3C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
 		B7047AA424857E2400F18D3C /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		B7047AA524857E2400F18D3C /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DurerRenderer.cpp; sourceTree = "<group>"; };
+		B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DurerRenderer.hpp; sourceTree = "<group>"; };
+		B729454F24AAF63800691DD4 /* TypeCast.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TypeCast.hpp; sourceTree = "<group>"; };
+		B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumBitMaskOperators.hpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED5244D85F20075D52C /* Spirit_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirit_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED7244D85F20075D52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +154,6 @@
 		B78443FD2469DD4C0098A651 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		B78444002469DDE50098A651 /* Buffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Buffer.mm; sourceTree = "<group>"; };
 		B78444012469DDE50098A651 /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
-		B7844406246B45B70098A651 /* EnumBitMaskOperators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnumBitMaskOperators.hpp; sourceTree = "<group>"; };
 		B7844409246B51ED0098A651 /* ResourceOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceOptions.h; sourceTree = "<group>"; };
 		B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptorArray.mm; sourceTree = "<group>"; };
 		B78444402479B9F00098A651 /* PipelineBufferDescriptorArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptorArray.h; sourceTree = "<group>"; };
@@ -184,6 +190,8 @@
 				B78443F52469C6920098A651 /* TriangleRenderer.hpp */,
 				B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */,
 				B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */,
+				B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */,
+				B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */,
 			);
 			name = renderers;
 			sourceTree = "<group>";
@@ -204,6 +212,14 @@
 				B7047A96247EF1B600F18D3C /* Component.hpp */,
 			);
 			name = core;
+			sourceTree = "<group>";
+		};
+		B729455324AB215B00691DD4 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 		B7671EBA244D7DC80075D52C = {
@@ -275,6 +291,7 @@
 		B7671EEE2450C4320075D52C /* metal */ = {
 			isa = PBXGroup;
 			children = (
+				B729455324AB215B00691DD4 /* util */,
 				B7671F542458BC6A0075D52C /* Metal.hpp */,
 				B7671F142455E5370075D52C /* Device.mm */,
 				B7671F152455E5370075D52C /* Device.h */,
@@ -349,7 +366,7 @@
 		B7844404246B454B0098A651 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				B7844406246B45B70098A651 /* EnumBitMaskOperators.hpp */,
+				B729454F24AAF63800691DD4 /* TypeCast.hpp */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -374,6 +391,8 @@
 				B7671F38245744430075D52C /* MetalDrawable.h in Headers */,
 				B7047A98247EF1B600F18D3C /* Component.hpp in Headers */,
 				B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */,
+				B729455524AB216900691DD4 /* EnumBitMaskOperators.hpp in Headers */,
+				B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */,
 				B7671FB7245DA4D00075D52C /* Error.h in Headers */,
 				B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */,
 				B7671F86245B51CA0075D52C /* Ref.h in Headers */,
@@ -504,6 +523,7 @@
 				B7671F58245B49FC0075D52C /* Library.mm in Sources */,
 				B7671FA2245D544C0075D52C /* ObjectProtocol.mm in Sources */,
 				B7671F162455E5370075D52C /* Device.mm in Sources */,
+				B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */,
 				B7671FA7245D79310075D52C /* RenderPipelineDescriptor.mm in Sources */,
 				B78443F62469C6920098A651 /* TriangleRenderer.cpp in Sources */,
 				B7671F2624560C700075D52C /* CommandEncoder.mm in Sources */,

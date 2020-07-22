@@ -24,6 +24,11 @@ enum class PrimitiveType: NSUInteger {
     triangleStrip = 4,
 } API_AVAILABLE(macos(10.11), ios(8.0));
 
+enum class IndexType: NSUInteger {
+    uInt16 = 0,
+    uInt32 = 1,
+} API_AVAILABLE(macos(10.11), ios(8.0));
+
 struct Viewport {
     double originX, originY, width, height, zNear, zFar;
 };
@@ -43,6 +48,7 @@ public:
     
     void drawPrimitives(PrimitiveType primitiveType, NSUInteger vertexStart, NSUInteger vertexCount);
     
+    void drawIndexedPrimitives(PrimitiveType primitiveType, NSUInteger indexCount, IndexType indexType, const BufferRef& indexBuffer, NSUInteger indexBufferOffset);
     
 };
 

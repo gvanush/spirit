@@ -14,3 +14,4 @@
 #include "Component.hpp"
 #include "TriangleRenderer.hpp"
 #include "TriangleWaveRenderer.hpp"
+#include "DurerRenderer.hpp"

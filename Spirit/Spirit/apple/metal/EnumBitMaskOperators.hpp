@@ -10,7 +10,7 @@
 
 #include <type_traits>
 
-namespace util::enum_bitmask_operators {
+namespace apple::metal {
 
 template<typename ET>
 inline constexpr bool IsEnumBitmasklOperatorsEnabled = false;

@@ -18,7 +18,7 @@ void Scene::load() {
     
     auto entity = createEntity();
     
-    entity->addComponent<TriangleWaveRenderer>();
+    entity->addComponent<DurerRenderer>();
     
 }
 

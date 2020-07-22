@@ -50,7 +50,7 @@ TriangleWaveRenderer::TriangleWaveRenderer()
     
     constexpr NSInteger kVertexBufferSize = kTriangleCount * kTriangleVertexCount * sizeof(Vertex);
     for(auto& buffer: _vertexBuffers) {
-        buffer = device.newBufferWithLength(kVertexBufferSize, metal::ResourceOptions::StorageModeShared);
+        buffer = device.newBufferWithLength(kVertexBufferSize, metal::ResourceOptions::storageModeShared);
     }
 }
 

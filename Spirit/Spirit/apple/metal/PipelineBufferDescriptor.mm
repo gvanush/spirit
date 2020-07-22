@@ -8,19 +8,16 @@
 
 #include "PipelineBufferDescriptor.h"
 
+#include "../../util/TypeCast.hpp"
+
 #import <Metal/Metal.h>
 
-namespace apple::metal {
-
-template <typename T>
-inline T to(Mutability mutability) {
-    return static_cast<T>(mutability);
-}
-
 template <>
-inline MTLMutability to(Mutability mutability) {
-    return MTLMutability { std::underlying_type_t<Mutability>(mutability) };
+inline MTLMutability to(apple::metal::Mutability mutability) {
+    return MTLMutability { std::underlying_type_t<apple::metal::Mutability>(mutability) };
 }
+
+namespace apple::metal {
 
 void PipelineBufferDescriptorRef::setMutability(Mutability mutability) const {
     obj<MTLPipelineBufferDescriptor*>().mutability = to<MTLMutability>(mutability);

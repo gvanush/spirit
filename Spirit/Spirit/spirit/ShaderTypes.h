@@ -14,4 +14,9 @@ struct Vertex {
     simd::float4 color;
 };
 
+struct Vertex3d {
+    simd::float3 position;
+    simd::float4 color;
+};
+
 }

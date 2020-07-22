@@ -16,4 +16,8 @@ void* BufferRef::contents() const {
     return obj<id<MTLBuffer>>().contents;
 }
 
+NSUInteger BufferRef::length() const {
+    return obj<id<MTLBuffer>>().length;
+}
+
 }

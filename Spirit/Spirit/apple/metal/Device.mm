@@ -35,6 +35,10 @@ BufferRef DeviceRef::newBufferWithLength(NSUInteger length, ResourceOptions opti
     return BufferRef { [obj<id<MTLDevice>>() newBufferWithLength: length options: to<MTLResourceOptions>(options)] };
 }
 
+BufferRef DeviceRef::newBufferWithBytes(const void* pointer, NSUInteger length, ResourceOptions options) const {
+    return BufferRef { [obj<id<MTLDevice>>() newBufferWithBytes: pointer length: length options: to<MTLResourceOptions>(options)] };
+}
+
 DeviceRef createSystemDefaultDevice() {
     return DeviceRef { MTLCreateSystemDefaultDevice() };
 }

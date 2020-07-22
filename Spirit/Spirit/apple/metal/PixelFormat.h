@@ -11,12 +11,6 @@
 #include <objc/NSObjCRuntime.h>
 #include <os/availability.h>
 
-#ifdef __OBJC__
-
-#import <Metal/MTLPixelFormat.h>
-
-#endif
-
 namespace apple::metal {
 
 enum class PixelFormat: NSUInteger
@@ -220,18 +214,17 @@ enum class PixelFormat: NSUInteger
 
 } API_AVAILABLE(macos(10.11), ios(8.0));
 
-#ifdef __OBJC__
-
-template <typename T>
-inline T to(PixelFormat pixelFormat) {
-    return static_cast<T>(pixelFormat);
 }
 
+#ifdef __OBJC__
+
+#include "../../util/TypeCast.hpp"
+
+#import <Metal/MTLPixelFormat.h>
+
 template <>
-inline MTLPixelFormat to(PixelFormat pixelFormat) {
-    return MTLPixelFormat { std::underlying_type_t<PixelFormat>(pixelFormat) };
+inline MTLPixelFormat to(apple::metal::PixelFormat pixelFormat) {
+    return MTLPixelFormat { std::underlying_type_t<apple::metal::PixelFormat>(pixelFormat) };
 }
 
 #endif
-
-}

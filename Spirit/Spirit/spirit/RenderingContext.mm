@@ -55,7 +55,7 @@
 }
 
 +(MTLPixelFormat) colorPixelFormat {
-    return apple::metal::to<MTLPixelFormat>(spirit::RenderingContext::kColorPixelFormat);
+    return to<MTLPixelFormat>(spirit::RenderingContext::kColorPixelFormat);
 }
 
 +(NSUInteger) sampleCount {

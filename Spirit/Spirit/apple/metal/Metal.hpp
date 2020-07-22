@@ -24,5 +24,6 @@
 #include "Function.h"
 #include "Drawable.h"
 #include "PixelFormat.h"
+#include "ResourceOptions.h"
 
 #include "../core_animation/MetalDrawable.h"

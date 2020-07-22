@@ -25,6 +25,8 @@ typedef struct
     // and then passes the interpolated value to the fragment shader for each
     // fragment in the triangle.
     float4 color /*[[flat]]*/;
+    
+    float pointSize [[point_size]];
 
 } RasterizerData;
 
@@ -52,6 +54,34 @@ vertexShader(uint vertexID [[vertex_id]],
     // Pass the input color directly to the rasterizer.
     out.color = vertices[vertexID].color;
 
+    return out;
+}
+
+vertex RasterizerData
+durerVertexShader(uint vertexID [[vertex_id]],
+             constant spirit::Vertex3d* vertices [[buffer(spirit::kVertexInputIndexVertices)]],
+             constant float2* viewportSizePtr [[buffer(spirit::kVertexInputIndexViewportSize)]])
+{
+    RasterizerData out;
+
+    // Index into the array of positions to get the current vertex.
+    // The positions are specified in pixel dimensions (i.e. a value of 100
+    // is 100 pixels from the origin).
+    float2 pixelSpacePosition = vertices[vertexID].position.xy;
+
+    // Get the viewport size and cast to float.
+//    auto viewportSize = *viewportSizePtr;
+    
+    // To convert from positions in pixel space to positions in clip-space,
+    //  divide the pixel coordinates by half the size of the viewport.
+    out.position.xy = (pixelSpacePosition / vertices[vertexID].position.z) / 2.0;
+    out.position.z = 1.0;
+
+    // Pass the input color directly to the rasterizer.
+    out.color = vertices[vertexID].color;
+
+    out.pointSize = 10.0;
+    
     return out;
 }
 

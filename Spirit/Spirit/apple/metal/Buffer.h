@@ -17,6 +17,8 @@ public:
     using ResourceRef::ResourceRef;
     
     void* contents() const;
+    
+    NSUInteger length() const;
 };
 
 }

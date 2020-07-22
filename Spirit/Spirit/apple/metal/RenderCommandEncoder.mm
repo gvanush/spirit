@@ -8,41 +8,28 @@
 
 #include "RenderCommandEncoder.h"
 
+#include "../../util/TypeCast.hpp"
+
 #import <Metal/Metal.h>
 
 #include <cstring>
 #include <iostream>
 
+template <>
+inline MTLPrimitiveType to(apple::metal::PrimitiveType primitiveType) {
+    return MTLPrimitiveType { std::underlying_type_t<apple::metal::PrimitiveType>(primitiveType) };
+}
+
+template <>
+inline MTLIndexType to(apple::metal::IndexType primitiveType) {
+    return MTLIndexType { std::underlying_type_t<apple::metal::IndexType>(primitiveType) };
+}
+
+inline MTLViewport toMTLViewport(const apple::metal::Viewport& viewport) {
+    return MTLViewport {viewport.originX, viewport.originY, viewport.width, viewport.height, viewport.zNear, viewport.zFar};
+}
+
 namespace apple::metal {
-
-namespace {
-
-inline MTLViewport toMTLViewport(const Viewport& viewport) {
-    MTLViewport result;
-    std::memcpy(&result, &viewport, sizeof(Viewport));
-    return result;
-}
-
-inline MTLPrimitiveType toMTLPrimitiveType(PrimitiveType primitiveType) {
-    return MTLPrimitiveType { std::underlying_type_t<PrimitiveType>(primitiveType) };
-}
-
-}
-
-// Check 'MTLViewport' and 'apple::metal::Viewport' are identical
-static_assert(sizeof(Viewport) == sizeof(MTLViewport));
-static_assert(offsetof(Viewport, originX) == offsetof(MTLViewport, originX));
-static_assert(offsetof(Viewport, originY) == offsetof(MTLViewport, originY));
-static_assert(offsetof(Viewport, width) == offsetof(MTLViewport, width));
-static_assert(offsetof(Viewport, height) == offsetof(MTLViewport, height));
-static_assert(offsetof(Viewport, zNear) == offsetof(MTLViewport, znear));
-static_assert(offsetof(Viewport, zFar) == offsetof(MTLViewport, zfar));
-static_assert(std::is_same<decltype(Viewport::originX), decltype(MTLViewport::originX)>::value);
-static_assert(std::is_same<decltype(Viewport::originY), decltype(MTLViewport::originY)>::value);
-static_assert(std::is_same<decltype(Viewport::width), decltype(MTLViewport::width)>::value);
-static_assert(std::is_same<decltype(Viewport::height), decltype(MTLViewport::height)>::value);
-static_assert(std::is_same<decltype(Viewport::zNear), decltype(MTLViewport::znear)>::value);
-static_assert(std::is_same<decltype(Viewport::zFar), decltype(MTLViewport::zfar)>::value);
 
 void RenderCommandEncoderRef::setViewport(const Viewport& viewport) {
     [obj<id<MTLRenderCommandEncoder>>() setViewport: toMTLViewport(viewport)];
@@ -61,7 +48,11 @@ void RenderCommandEncoderRef::setVertexBuffer(const BufferRef& buffer, NSUIntege
 }
 
 void RenderCommandEncoderRef::drawPrimitives(PrimitiveType primitiveType, NSUInteger vertexStart, NSUInteger vertexCount) {
-    [obj<id<MTLRenderCommandEncoder>>() drawPrimitives: toMTLPrimitiveType(primitiveType) vertexStart: vertexStart vertexCount: vertexCount];
+    [obj<id<MTLRenderCommandEncoder>>() drawPrimitives: to<MTLPrimitiveType>(primitiveType) vertexStart: vertexStart vertexCount: vertexCount];
+}
+
+void RenderCommandEncoderRef::drawIndexedPrimitives(PrimitiveType primitiveType, NSUInteger indexCount, IndexType indexType, const BufferRef& indexBuffer, NSUInteger indexBufferOffset) {
+    [obj<id<MTLRenderCommandEncoder>>() drawIndexedPrimitives: to<MTLPrimitiveType>(primitiveType) indexCount: indexCount indexType: to<MTLIndexType>(indexType) indexBuffer: indexBuffer.obj<id<MTLBuffer>>() indexBufferOffset: indexBufferOffset];
 }
 
 }

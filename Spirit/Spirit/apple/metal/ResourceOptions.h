@@ -8,16 +8,10 @@
 
 #pragma once
 
-#include "../../util/EnumBitMaskOperators.hpp"
+#include "EnumBitMaskOperators.hpp"
 
 #include <objc/NSObjCRuntime.h>
 #include <os/availability.h>
-
-#ifdef __OBJC__
-
-#import <Metal/MTLResource.h>
-
-#endif
 
 namespace apple::metal {
 
@@ -48,47 +42,39 @@ constexpr NSUInteger kResourceStorageModeMask = (0xfUL << kResourceStorageModeSh
 constexpr NSUInteger kResourceHazardTrackingModeShift = 8;
 constexpr NSUInteger kResourceHazardTrackingModeMask = (0x3UL << kResourceHazardTrackingModeShift);
 
-enum class ResourceOptions: NSUInteger
-{
-    CPUCacheModeDefaultCache  = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::defaultCache)  << kResourceCPUCacheModeShift,
-    CPUCacheModeWriteCombined = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::writeCombined) << kResourceCPUCacheModeShift,
+enum class ResourceOptions: NSUInteger {
+    cpuCacheModeDefaultCache  = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::defaultCache)  << kResourceCPUCacheModeShift,
+    cpuCacheModeWriteCombined = static_cast<std::underlying_type_t<ResourceOptions>>(CPUCacheMode::writeCombined) << kResourceCPUCacheModeShift,
 
-    StorageModeShared     API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::shared)     << kResourceStorageModeShift,
-    StorageModeManaged    API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios)   = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::managed)    << kResourceStorageModeShift,
-    StorageModePrivate    API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::private_)    << kResourceStorageModeShift,
-    StorageModeMemoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::memoryless) << kResourceStorageModeShift,
+    storageModeShared     API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::shared)     << kResourceStorageModeShift,
+    storageModeManaged    API_AVAILABLE(macos(10.11), macCatalyst(13.0)) API_UNAVAILABLE(ios)   = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::managed)    << kResourceStorageModeShift,
+    storageModePrivate    API_AVAILABLE(macos(10.11), ios(9.0))  = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::private_)    << kResourceStorageModeShift,
+    storageModeMemoryless API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(macos, macCatalyst) = static_cast<std::underlying_type_t<ResourceOptions>>(StorageMode::memoryless) << kResourceStorageModeShift,
     
-    HazardTrackingModeDefault API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::default_) << kResourceHazardTrackingModeShift,
-    HazardTrackingModeUntracked API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::untracked) << kResourceHazardTrackingModeShift,
-    HazardTrackingModeTracked API_AVAILABLE(macos(10.15), ios(13.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::tracked) << kResourceHazardTrackingModeShift,
+    hazardTrackingModeDefault API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::default_) << kResourceHazardTrackingModeShift,
+    hazardTrackingModeUntracked API_AVAILABLE(macos(10.13), ios(10.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::untracked) << kResourceHazardTrackingModeShift,
+    hazardTrackingModeTracked API_AVAILABLE(macos(10.15), ios(13.0)) = static_cast<std::underlying_type_t<ResourceOptions>>(HazardTrackingMode::tracked) << kResourceHazardTrackingModeShift,
     
     // Deprecated spellings
-    OptionCPUCacheModeDefault       = CPUCacheModeDefaultCache,
-    OptionCPUCacheModeWriteCombined = CPUCacheModeWriteCombined,
+    OptionCPUCacheModeDefault       = cpuCacheModeDefaultCache,
+    OptionCPUCacheModeWriteCombined = cpuCacheModeWriteCombined,
 } API_AVAILABLE(macos(10.11), ios(8.0));
 
-using namespace util::enum_bitmask_operators;
+template<>
+inline constexpr bool IsEnumBitmasklOperatorsEnabled<metal::ResourceOptions> = true;
+
+}
+
 
 #ifdef __OBJC__
 
-template <typename T>
-inline T to(ResourceOptions resourceOptions) {
-    return static_cast<T>(resourceOptions);
-}
+#include "../../util/TypeCast.hpp"
+
+#import <Metal/MTLResource.h>
 
 template <>
-inline MTLResourceOptions to(ResourceOptions resourceOptions) {
-    return MTLResourceOptions { std::underlying_type_t<ResourceOptions>(resourceOptions) };
+inline MTLResourceOptions to(apple::metal::ResourceOptions resourceOptions) {
+    return MTLResourceOptions { std::underlying_type_t<apple::metal::ResourceOptions>(resourceOptions) };
 }
 
 #endif
-
-}
-
-namespace util::enum_bitmask_operators {
-
-template<>
-inline constexpr bool IsEnumBitmasklOperatorsEnabled<apple::metal::ResourceOptions> = true;
-
-}
-
