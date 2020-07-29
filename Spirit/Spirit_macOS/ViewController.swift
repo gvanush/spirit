@@ -23,7 +23,7 @@ class ViewController: NSViewController, MTKViewDelegate {
         mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 1.0, 1.0);
         mtkView.colorPixelFormat = SPRTRenderingContext.colorPixelFormat()
         mtkView.sampleCount = Int(SPRTRenderingContext.sampleCount())
-        self.view.addSubview(mtkView)
+        self.view.addSubview(mtkView, positioned: .below, relativeTo: nil)
         
         mtkView.delegate = self
         
@@ -56,5 +56,17 @@ class ViewController: NSViewController, MTKViewDelegate {
         SPRTCore.render(renderingContext)
     }
 
+    override func mouseUp(with event: NSEvent) {
+        print("on mouse up")
+    }
+
+    @IBAction func onSubdivideClicked(_ sender: Any) {
+        print("subdivide clicked")
+    }
+    
+    @IBAction func onClearClicked(_ sender: Any) {
+        print("clear clicked")
+    }
+    
 }
 

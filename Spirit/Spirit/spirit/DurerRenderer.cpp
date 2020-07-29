@@ -18,7 +18,7 @@ namespace spirit {
 
 namespace {
 
-constexpr NSUInteger kCubeVertexCount = 8;
+//constexpr NSUInteger kCubeVertexCount = 8;
 constexpr NSUInteger kCubeEdgeCount = 12;
 constexpr NSUInteger kCubeEdgeIndexCount = 2 * kCubeEdgeCount;
 constexpr NSUInteger kCubeFaceCount = 6;
