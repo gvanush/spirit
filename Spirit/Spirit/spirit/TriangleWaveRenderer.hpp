@@ -12,7 +12,7 @@
 
 #include "_internal/Semaphore.hpp"
 
-#include "../apple/metal/Metal.hpp"
+#include "apple/metal/Metal.hpp"
 
 #include <array>
 #include <simd/simd.h>

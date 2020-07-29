@@ -13,55 +13,35 @@
 		B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A9D247F9DA200F18D3C /* Core.cpp */; };
 		B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A9E247F9DA200F18D3C /* Core.hpp */; };
 		B7047AA624857E2400F18D3C /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7047AA524857E2400F18D3C /* Scene.mm */; };
+		B715B23624D2021B00B4C859 /* libSpirit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7671EC3244D7DC80075D52C /* libSpirit.a */; };
+		B715B23724D203F500B4C859 /* libAppleCppAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B715B23124D1FDA500B4C859 /* libAppleCppAPI.a */; };
 		B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */; };
 		B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */; };
-		B729455524AB216900691DD4 /* EnumBitMaskOperators.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */; };
 		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED7244D85F20075D52C /* AppDelegate.swift */; };
 		B7671EDA244D85F20075D52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED9244D85F20075D52C /* ViewController.swift */; };
 		B7671EDC244D85F30075D52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDB244D85F30075D52C /* Assets.xcassets */; };
 		B7671EDF244D85F30075D52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDD244D85F30075D52C /* Main.storyboard */; };
-		B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */; };
-		B7671EFA2450D2990075D52C /* libSpirit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7671EC3244D7DC80075D52C /* libSpirit.a */; };
-		B7671F162455E5370075D52C /* Device.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F142455E5370075D52C /* Device.mm */; };
-		B7671F1A2455E6A80075D52C /* CommandQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F182455E6A80075D52C /* CommandQueue.mm */; };
-		B7671F1E2455EB550075D52C /* CommandBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F1C2455EB550075D52C /* CommandBuffer.mm */; };
-		B7671F2624560C700075D52C /* CommandEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F2424560C700075D52C /* CommandEncoder.mm */; };
-		B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */; };
-		B7671F32245743AE0075D52C /* Drawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F30245743AE0075D52C /* Drawable.mm */; };
-		B7671F37245744430075D52C /* MetalDrawable.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F35245744430075D52C /* MetalDrawable.mm */; };
-		B7671F38245744430075D52C /* MetalDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F36245744430075D52C /* MetalDrawable.h */; };
 		B7671F42245766630075D52C /* SPRTCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F40245766630075D52C /* SPRTCore.mm */; };
 		B7671F472458A7620075D52C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F482458A7BA0075D52C /* ShaderTypes.h */; };
-		B7671F58245B49FC0075D52C /* Library.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F56245B49FC0075D52C /* Library.mm */; };
-		B7671F86245B51CA0075D52C /* Ref.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F7A245B51C90075D52C /* Ref.h */; };
-		B7671F8A245B51CA0075D52C /* Ref.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F7E245B51CA0075D52C /* Ref.mm */; };
-		B7671F8D245B54130075D52C /* String.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F8B245B54130075D52C /* String.mm */; };
-		B7671F92245B64630075D52C /* Function.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F90245B64630075D52C /* Function.mm */; };
-		B7671F9A245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F98245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm */; };
-		B7671F9E245CA1920075D52C /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F9C245CA1920075D52C /* Object.mm */; };
-		B7671F9F245CA1920075D52C /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F9D245CA1920075D52C /* Object.h */; };
-		B7671FA2245D544C0075D52C /* ObjectProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA0245D544C0075D52C /* ObjectProtocol.mm */; };
-		B7671FA3245D544C0075D52C /* ObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671FA1245D544C0075D52C /* ObjectProtocol.h */; };
 		B7671FA6245D72910075D52C /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA4245D72910075D52C /* Scene.cpp */; };
-		B7671FA7245D79310075D52C /* RenderPipelineDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F94245B68A70075D52C /* RenderPipelineDescriptor.mm */; };
-		B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */; };
-		B7671FB2245D9B6F0075D52C /* RenderPipelineState.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FB0245D9B6F0075D52C /* RenderPipelineState.mm */; };
-		B7671FB3245D9B6F0075D52C /* RenderPipelineState.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671FB1245D9B6F0075D52C /* RenderPipelineState.h */; };
-		B7671FB6245DA4D00075D52C /* Error.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671FB4245DA4D00075D52C /* Error.mm */; };
-		B7671FB7245DA4D00075D52C /* Error.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671FB5245DA4D00075D52C /* Error.h */; };
 		B78443F62469C6920098A651 /* TriangleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B78443F42469C6920098A651 /* TriangleRenderer.cpp */; };
 		B78443F72469C6920098A651 /* TriangleRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B78443F52469C6920098A651 /* TriangleRenderer.hpp */; };
 		B78443FA2469CA2E0098A651 /* TriangleWaveRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */; };
-		B78443FE2469DD4C0098A651 /* Resource.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78443FC2469DD4C0098A651 /* Resource.mm */; };
-		B78444022469DDE50098A651 /* Buffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78444002469DDE50098A651 /* Buffer.mm */; };
-		B78444032469DDE50098A651 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = B78444012469DDE50098A651 /* Buffer.h */; };
-		B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */; };
-		B78444452479BDD10098A651 /* PipelineBufferDescriptor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */; };
 		B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B784444C247C26D80098A651 /* SPRTRenderingContext.h */; };
 		B784444F247C26D80098A651 /* RenderingContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784444D247C26D80098A651 /* RenderingContext.mm */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B715B23024D1FDA500B4C859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B786A90524D1E31D00F6EE83;
+			remoteInfo = AppleCppAPI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B7568A63246078FC008943BA /* CopyFiles */ = {
@@ -87,10 +67,9 @@
 		B7047AA3248578DE00F18D3C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
 		B7047AA424857E2400F18D3C /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		B7047AA524857E2400F18D3C /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppleCppAPI.xcodeproj; path = ../AppleCppAPI/AppleCppAPI.xcodeproj; sourceTree = "<group>"; };
 		B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DurerRenderer.cpp; sourceTree = "<group>"; };
 		B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DurerRenderer.hpp; sourceTree = "<group>"; };
-		B729454F24AAF63800691DD4 /* TypeCast.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TypeCast.hpp; sourceTree = "<group>"; };
-		B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumBitMaskOperators.hpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED5244D85F20075D52C /* Spirit_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirit_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7671ED7244D85F20075D52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,66 +78,17 @@
 		B7671EDE244D85F30075D52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7671EE0244D85F30075D52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spirit_macOS.entitlements; sourceTree = "<group>"; };
-		B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPassDescriptor.mm; sourceTree = "<group>"; };
-		B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPassDescriptor.h; sourceTree = "<group>"; };
 		B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spirit_macOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		B7671F142455E5370075D52C /* Device.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Device.mm; sourceTree = "<group>"; };
-		B7671F152455E5370075D52C /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
-		B7671F182455E6A80075D52C /* CommandQueue.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandQueue.mm; sourceTree = "<group>"; };
-		B7671F192455E6A80075D52C /* CommandQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandQueue.h; sourceTree = "<group>"; };
-		B7671F1C2455EB550075D52C /* CommandBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandBuffer.mm; sourceTree = "<group>"; };
-		B7671F1D2455EB550075D52C /* CommandBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandBuffer.h; sourceTree = "<group>"; };
-		B7671F2424560C700075D52C /* CommandEncoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandEncoder.mm; sourceTree = "<group>"; };
-		B7671F2524560C700075D52C /* CommandEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandEncoder.h; sourceTree = "<group>"; };
-		B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderCommandEncoder.mm; sourceTree = "<group>"; };
-		B7671F2924560D9C0075D52C /* RenderCommandEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderCommandEncoder.h; sourceTree = "<group>"; };
-		B7671F30245743AE0075D52C /* Drawable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Drawable.mm; sourceTree = "<group>"; };
-		B7671F31245743AE0075D52C /* Drawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
-		B7671F35245744430075D52C /* MetalDrawable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalDrawable.mm; sourceTree = "<group>"; };
-		B7671F36245744430075D52C /* MetalDrawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalDrawable.h; sourceTree = "<group>"; };
 		B7671F3F245766630075D52C /* SPRTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTCore.h; sourceTree = "<group>"; };
 		B7671F40245766630075D52C /* SPRTCore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SPRTCore.mm; sourceTree = "<group>"; };
 		B7671F462458A7620075D52C /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		B7671F482458A7BA0075D52C /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
-		B7671F542458BC6A0075D52C /* Metal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Metal.hpp; sourceTree = "<group>"; };
-		B7671F56245B49FC0075D52C /* Library.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Library.mm; sourceTree = "<group>"; };
-		B7671F57245B49FC0075D52C /* Library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
-		B7671F7A245B51C90075D52C /* Ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ref.h; sourceTree = "<group>"; };
-		B7671F7E245B51CA0075D52C /* Ref.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Ref.mm; sourceTree = "<group>"; };
-		B7671F8B245B54130075D52C /* String.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = String.mm; sourceTree = "<group>"; };
-		B7671F8C245B54130075D52C /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
-		B7671F90245B64630075D52C /* Function.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Function.mm; sourceTree = "<group>"; };
-		B7671F91245B64630075D52C /* Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
-		B7671F94245B68A70075D52C /* RenderPipelineDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPipelineDescriptor.mm; sourceTree = "<group>"; };
-		B7671F95245B68A70075D52C /* RenderPipelineDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPipelineDescriptor.h; sourceTree = "<group>"; };
-		B7671F98245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPipelineColorAttachmentDescriptorArray.mm; sourceTree = "<group>"; };
-		B7671F99245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPipelineColorAttachmentDescriptorArray.h; sourceTree = "<group>"; };
-		B7671F9C245CA1920075D52C /* Object.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Object.mm; sourceTree = "<group>"; };
-		B7671F9D245CA1920075D52C /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		B7671FA0245D544C0075D52C /* ObjectProtocol.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectProtocol.mm; sourceTree = "<group>"; };
-		B7671FA1245D544C0075D52C /* ObjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectProtocol.h; sourceTree = "<group>"; };
 		B7671FA4245D72910075D52C /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		B7671FA5245D72910075D52C /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
-		B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPipelineColorAttachmentDescriptor.mm; sourceTree = "<group>"; };
-		B7671FA9245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPipelineColorAttachmentDescriptor.h; sourceTree = "<group>"; };
-		B7671FAD245D85F40075D52C /* PixelFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelFormat.h; sourceTree = "<group>"; };
-		B7671FB0245D9B6F0075D52C /* RenderPipelineState.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPipelineState.mm; sourceTree = "<group>"; };
-		B7671FB1245D9B6F0075D52C /* RenderPipelineState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderPipelineState.h; sourceTree = "<group>"; };
-		B7671FB4245DA4D00075D52C /* Error.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Error.mm; sourceTree = "<group>"; };
-		B7671FB5245DA4D00075D52C /* Error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
 		B78443F42469C6920098A651 /* TriangleRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleRenderer.cpp; sourceTree = "<group>"; };
 		B78443F52469C6920098A651 /* TriangleRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TriangleRenderer.hpp; sourceTree = "<group>"; };
 		B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleWaveRenderer.cpp; sourceTree = "<group>"; };
 		B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TriangleWaveRenderer.hpp; sourceTree = "<group>"; };
-		B78443FC2469DD4C0098A651 /* Resource.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Resource.mm; sourceTree = "<group>"; };
-		B78443FD2469DD4C0098A651 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
-		B78444002469DDE50098A651 /* Buffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Buffer.mm; sourceTree = "<group>"; };
-		B78444012469DDE50098A651 /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
-		B7844409246B51ED0098A651 /* ResourceOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceOptions.h; sourceTree = "<group>"; };
-		B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptorArray.mm; sourceTree = "<group>"; };
-		B78444402479B9F00098A651 /* PipelineBufferDescriptorArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptorArray.h; sourceTree = "<group>"; };
-		B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PipelineBufferDescriptor.mm; sourceTree = "<group>"; };
-		B78444442479BDD10098A651 /* PipelineBufferDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipelineBufferDescriptor.h; sourceTree = "<group>"; };
 		B7844449247B0C430098A651 /* Semaphore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Semaphore.hpp; sourceTree = "<group>"; };
 		B784444C247C26D80098A651 /* SPRTRenderingContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTRenderingContext.h; sourceTree = "<group>"; };
 		B784444D247C26D80098A651 /* RenderingContext.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderingContext.mm; sourceTree = "<group>"; };
@@ -169,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B715B23724D203F500B4C859 /* libAppleCppAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7671EFA2450D2990075D52C /* libSpirit.a in Frameworks */,
+				B715B23624D2021B00B4C859 /* libSpirit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,17 +145,18 @@
 			name = core;
 			sourceTree = "<group>";
 		};
-		B729455324AB215B00691DD4 /* util */ = {
+		B715B22D24D1FDA500B4C859 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B729455424AB216900691DD4 /* EnumBitMaskOperators.hpp */,
+				B715B23124D1FDA500B4C859 /* libAppleCppAPI.a */,
 			);
-			name = util;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B7671EBA244D7DC80075D52C = {
 			isa = PBXGroup;
 			children = (
+				B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */,
 				B7671EC5244D7DC90075D52C /* Spirit */,
 				B7671ED6244D85F20075D52C /* Spirit_macOS */,
 				B7671EC4244D7DC80075D52C /* Products */,
@@ -244,8 +176,6 @@
 		B7671EC5244D7DC90075D52C /* Spirit */ = {
 			isa = PBXGroup;
 			children = (
-				B7844404246B454B0098A651 /* util */,
-				B7671EEA2450C4320075D52C /* apple */,
 				B7671F39245749130075D52C /* spirit */,
 			);
 			path = Spirit;
@@ -269,84 +199,11 @@
 			path = Spirit_macOS;
 			sourceTree = "<group>";
 		};
-		B7671EEA2450C4320075D52C /* apple */ = {
-			isa = PBXGroup;
-			children = (
-				B7671F7E245B51CA0075D52C /* Ref.mm */,
-				B7671F7A245B51C90075D52C /* Ref.h */,
-				B7671FA0245D544C0075D52C /* ObjectProtocol.mm */,
-				B7671FA1245D544C0075D52C /* ObjectProtocol.h */,
-				B7671F9C245CA1920075D52C /* Object.mm */,
-				B7671F9D245CA1920075D52C /* Object.h */,
-				B7671F8B245B54130075D52C /* String.mm */,
-				B7671F8C245B54130075D52C /* String.h */,
-				B7671FB4245DA4D00075D52C /* Error.mm */,
-				B7671FB5245DA4D00075D52C /* Error.h */,
-				B7671EEE2450C4320075D52C /* metal */,
-				B7671F34245744110075D52C /* core_animation */,
-			);
-			path = apple;
-			sourceTree = "<group>";
-		};
-		B7671EEE2450C4320075D52C /* metal */ = {
-			isa = PBXGroup;
-			children = (
-				B729455324AB215B00691DD4 /* util */,
-				B7671F542458BC6A0075D52C /* Metal.hpp */,
-				B7671F142455E5370075D52C /* Device.mm */,
-				B7671F152455E5370075D52C /* Device.h */,
-				B7671FB0245D9B6F0075D52C /* RenderPipelineState.mm */,
-				B7671FB1245D9B6F0075D52C /* RenderPipelineState.h */,
-				B7671F94245B68A70075D52C /* RenderPipelineDescriptor.mm */,
-				B7671F95245B68A70075D52C /* RenderPipelineDescriptor.h */,
-				B7671F98245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm */,
-				B7671F99245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.h */,
-				B7671FA8245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm */,
-				B7671FA9245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.h */,
-				B784443F2479B9F00098A651 /* PipelineBufferDescriptorArray.mm */,
-				B78444402479B9F00098A651 /* PipelineBufferDescriptorArray.h */,
-				B78444432479BDD10098A651 /* PipelineBufferDescriptor.mm */,
-				B78444442479BDD10098A651 /* PipelineBufferDescriptor.h */,
-				B7671F182455E6A80075D52C /* CommandQueue.mm */,
-				B7671F192455E6A80075D52C /* CommandQueue.h */,
-				B7671F1C2455EB550075D52C /* CommandBuffer.mm */,
-				B7671F1D2455EB550075D52C /* CommandBuffer.h */,
-				B7671F2424560C700075D52C /* CommandEncoder.mm */,
-				B7671F2524560C700075D52C /* CommandEncoder.h */,
-				B7671EF12450C54C0075D52C /* RenderPassDescriptor.mm */,
-				B7671EF22450C54C0075D52C /* RenderPassDescriptor.h */,
-				B7671F2824560D9C0075D52C /* RenderCommandEncoder.mm */,
-				B7671F2924560D9C0075D52C /* RenderCommandEncoder.h */,
-				B78443FC2469DD4C0098A651 /* Resource.mm */,
-				B78443FD2469DD4C0098A651 /* Resource.h */,
-				B7844409246B51ED0098A651 /* ResourceOptions.h */,
-				B78444002469DDE50098A651 /* Buffer.mm */,
-				B78444012469DDE50098A651 /* Buffer.h */,
-				B7671F56245B49FC0075D52C /* Library.mm */,
-				B7671F57245B49FC0075D52C /* Library.h */,
-				B7671F90245B64630075D52C /* Function.mm */,
-				B7671F91245B64630075D52C /* Function.h */,
-				B7671F30245743AE0075D52C /* Drawable.mm */,
-				B7671F31245743AE0075D52C /* Drawable.h */,
-				B7671FAD245D85F40075D52C /* PixelFormat.h */,
-			);
-			path = metal;
-			sourceTree = "<group>";
-		};
 		B7671EF92450D2990075D52C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B7671F34245744110075D52C /* core_animation */ = {
-			isa = PBXGroup;
-			children = (
-				B7671F35245744430075D52C /* MetalDrawable.mm */,
-				B7671F36245744430075D52C /* MetalDrawable.h */,
-			);
-			path = core_animation;
 			sourceTree = "<group>";
 		};
 		B7671F39245749130075D52C /* spirit */ = {
@@ -361,14 +218,6 @@
 				B7844447247B0C2B0098A651 /* _internal */,
 			);
 			path = spirit;
-			sourceTree = "<group>";
-		};
-		B7844404246B454B0098A651 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				B729454F24AAF63800691DD4 /* TypeCast.hpp */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 		B7844447247B0C2B0098A651 /* _internal */ = {
@@ -386,20 +235,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7671FA3245D544C0075D52C /* ObjectProtocol.h in Headers */,
 				B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */,
-				B7671F38245744430075D52C /* MetalDrawable.h in Headers */,
 				B7047A98247EF1B600F18D3C /* Component.hpp in Headers */,
 				B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */,
-				B729455524AB216900691DD4 /* EnumBitMaskOperators.hpp in Headers */,
 				B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */,
-				B7671FB7245DA4D00075D52C /* Error.h in Headers */,
 				B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */,
-				B7671F86245B51CA0075D52C /* Ref.h in Headers */,
-				B7671FB3245D9B6F0075D52C /* RenderPipelineState.h in Headers */,
 				B78443F72469C6920098A651 /* TriangleRenderer.hpp in Headers */,
-				B78444032469DDE50098A651 /* Buffer.h in Headers */,
-				B7671F9F245CA1920075D52C /* Object.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +312,12 @@
 			mainGroup = B7671EBA244D7DC80075D52C;
 			productRefGroup = B7671EC4244D7DC80075D52C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B715B22D24D1FDA500B4C859 /* Products */;
+					ProjectRef = B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B7671EC2244D7DC80075D52C /* Spirit */,
@@ -478,6 +325,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B715B23124D1FDA500B4C859 /* libAppleCppAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppleCppAPI.a;
+			remoteRef = B715B23024D1FDA500B4C859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B7671ED3244D85F20075D52C /* Resources */ = {
@@ -496,37 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7671F9E245CA1920075D52C /* Object.mm in Sources */,
-				B7671EF32450C54C0075D52C /* RenderPassDescriptor.mm in Sources */,
-				B7671F8D245B54130075D52C /* String.mm in Sources */,
-				B7671F32245743AE0075D52C /* Drawable.mm in Sources */,
-				B7671F37245744430075D52C /* MetalDrawable.mm in Sources */,
-				B7671F1E2455EB550075D52C /* CommandBuffer.mm in Sources */,
 				B7671F42245766630075D52C /* SPRTCore.mm in Sources */,
-				B78443FE2469DD4C0098A651 /* Resource.mm in Sources */,
-				B7671F9A245C97B20075D52C /* RenderPipelineColorAttachmentDescriptorArray.mm in Sources */,
-				B7671F92245B64630075D52C /* Function.mm in Sources */,
-				B78444412479B9F00098A651 /* PipelineBufferDescriptorArray.mm in Sources */,
-				B7671FAA245D7BA70075D52C /* RenderPipelineColorAttachmentDescriptor.mm in Sources */,
-				B7671FB6245DA4D00075D52C /* Error.mm in Sources */,
 				B7047A97247EF1B600F18D3C /* Component.cpp in Sources */,
 				B7671F472458A7620075D52C /* Shaders.metal in Sources */,
 				B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */,
 				B784444F247C26D80098A651 /* RenderingContext.mm in Sources */,
-				B7671F1A2455E6A80075D52C /* CommandQueue.mm in Sources */,
-				B7671FB2245D9B6F0075D52C /* RenderPipelineState.mm in Sources */,
-				B7671F2A24560D9C0075D52C /* RenderCommandEncoder.mm in Sources */,
 				B7047A9B247F978F00F18D3C /* Entity.cpp in Sources */,
-				B78444022469DDE50098A651 /* Buffer.mm in Sources */,
-				B78444452479BDD10098A651 /* PipelineBufferDescriptor.mm in Sources */,
-				B7671F8A245B51CA0075D52C /* Ref.mm in Sources */,
-				B7671F58245B49FC0075D52C /* Library.mm in Sources */,
-				B7671FA2245D544C0075D52C /* ObjectProtocol.mm in Sources */,
-				B7671F162455E5370075D52C /* Device.mm in Sources */,
 				B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */,
-				B7671FA7245D79310075D52C /* RenderPipelineDescriptor.mm in Sources */,
 				B78443F62469C6920098A651 /* TriangleRenderer.cpp in Sources */,
-				B7671F2624560C700075D52C /* CommandEncoder.mm in Sources */,
 				B78443FA2469CA2E0098A651 /* TriangleWaveRenderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,9 +510,12 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = "";
 				MODULEMAP_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../AppleCppAPI/AppleCppAPI";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -692,9 +529,12 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = "";
 				MODULEMAP_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../AppleCppAPI/AppleCppAPI";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
@@ -710,7 +550,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Spirit";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Spirit_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,6 +562,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../AppleCppAPI/AppleCppAPI",
+					"$(PROJECT_DIR)/Spirit",
+				);
 			};
 			name = Debug;
 		};
@@ -737,7 +581,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Spirit";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Spirit_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -749,6 +593,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../AppleCppAPI/AppleCppAPI",
+					"$(PROJECT_DIR)/Spirit",
+				);
 			};
 			name = Release;
 		};

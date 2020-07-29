@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "../apple/metal/Metal.hpp"
+#include "apple/metal/Metal.hpp"
 
 #include <simd/simd.h>
 
