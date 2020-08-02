@@ -32,6 +32,10 @@
 		B7847B0524D696EB00026607 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7847B0324D696EB00026607 /* MetalKit.framework */; };
 		B7847B0624D696EB00026607 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7847B0424D696EB00026607 /* Metal.framework */; };
 		B7847B0724D6A10500026607 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
+		B7847B0B24D6A3A300026607 /* Polyline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7847B0924D6A3A300026607 /* Polyline.cpp */; };
+		B7847B0C24D6A3A300026607 /* Polyline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7847B0A24D6A3A300026607 /* Polyline.hpp */; };
+		B7847B0F24D6A76300026607 /* PolylineRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7847B0D24D6A76300026607 /* PolylineRenderer.cpp */; };
+		B7847B1024D6A76300026607 /* PolylineRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7847B0E24D6A76300026607 /* PolylineRenderer.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		B7847B0024D692E200026607 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B7847B0324D696EB00026607 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		B7847B0424D696EB00026607 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		B7847B0924D6A3A300026607 /* Polyline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Polyline.cpp; sourceTree = "<group>"; };
+		B7847B0A24D6A3A300026607 /* Polyline.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Polyline.hpp; sourceTree = "<group>"; };
+		B7847B0D24D6A76300026607 /* PolylineRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PolylineRenderer.cpp; sourceTree = "<group>"; };
+		B7847B0E24D6A76300026607 /* PolylineRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PolylineRenderer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,8 @@
 				B78443F92469CA2E0098A651 /* TriangleWaveRenderer.hpp */,
 				B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */,
 				B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */,
+				B7847B0D24D6A76300026607 /* PolylineRenderer.cpp */,
+				B7847B0E24D6A76300026607 /* PolylineRenderer.hpp */,
 			);
 			name = renderers;
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B7047AA8248EBB1500F18D3C /* core */,
+				B7847B0824D6A38500026607 /* geometry */,
 				B7047AA7248EBAE600F18D3C /* renderers */,
 				B7047AA22485782400F18D3C /* Spirit.hpp */,
 				B7047AA3248578DE00F18D3C /* Spirit.h */,
@@ -219,6 +230,15 @@
 			path = TestBed;
 			sourceTree = "<group>";
 		};
+		B7847B0824D6A38500026607 /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				B7847B0924D6A3A300026607 /* Polyline.cpp */,
+				B7847B0A24D6A3A300026607 /* Polyline.hpp */,
+			);
+			name = geometry;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -227,9 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */,
+				B7847B0C24D6A3A300026607 /* Polyline.hpp in Headers */,
 				B7047A98247EF1B600F18D3C /* Component.hpp in Headers */,
 				B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */,
 				B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */,
+				B7847B1024D6A76300026607 /* PolylineRenderer.hpp in Headers */,
 				B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */,
 				B78443F72469C6920098A651 /* TriangleRenderer.hpp in Headers */,
 			);
@@ -347,6 +369,8 @@
 				B7671F472458A7620075D52C /* Shaders.metal in Sources */,
 				B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */,
 				B784444F247C26D80098A651 /* RenderingContext.mm in Sources */,
+				B7847B0F24D6A76300026607 /* PolylineRenderer.cpp in Sources */,
+				B7847B0B24D6A3A300026607 /* Polyline.cpp in Sources */,
 				B7047A9B247F978F00F18D3C /* Entity.cpp in Sources */,
 				B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */,
 				B78443F62469C6920098A651 /* TriangleRenderer.cpp in Sources */,

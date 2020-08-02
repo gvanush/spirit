@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 #include "spirit/Spirit.hpp"
+#include "spirit/Polyline.hpp"
+#include "spirit/PolylineRenderer.hpp"
 
 #import <MetalKit/MetalKit.h>
 
@@ -16,6 +18,7 @@
 
 @interface ViewController () <MTKViewDelegate> {
     std::unique_ptr<spirit::RenderingContext> _renderingContext;
+    spirit::Polyline _polyline;
 }
 
 @property (nonatomic, readwrite) MTKView* mtkView;
@@ -31,7 +34,7 @@
     
     self.mtkView = [[MTKView alloc] initWithFrame: self.view.bounds device: spirit::RenderingContext::device.obj<id>()];
     self.mtkView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    self.mtkView.clearColor = MTLClearColorMake(0.5, 0.5, 1.0, 1.0);
+    self.mtkView.clearColor = MTLClearColorMake(0.3, 0.3, 0.3, 1.0);
     self.mtkView.colorPixelFormat = to<MTLPixelFormat>(spirit::RenderingContext::kColorPixelFormat);
     self.mtkView.sampleCount = spirit::RenderingContext::kSampleCount;
     [self.view addSubview: self.mtkView];
@@ -49,15 +52,35 @@
     
     auto entity = createEntity();
     
-    entity->addComponent<DurerRenderer>();
+    auto polylineRenderer = entity->addComponent<PolylineRenderer>();
+    polylineRenderer->setPolyline(&_polyline);
 }
 
-- (IBAction)subdivide:(NSButton *)sender {
-    NSLog(@"subdivide");
+-(void) mouseUp: (NSEvent*) event {
+    
+    if(_polyline.isClosed()) {
+        return;
+    }
+    
+    float backingScaleFactor = [NSScreen mainScreen].backingScaleFactor;
+    NSPoint point = [self.mtkView convertPoint: event.locationInWindow fromView: nil];
+    _polyline.addPoint(simd::float2 {static_cast<float>(point.x) * backingScaleFactor, static_cast<float>(point.y) * backingScaleFactor});
+    
+//    NSLog(@"%f, %f", (point.x * backingScaleFactor) / _renderingContext->drawableSize().x, (point.y * backingScaleFactor) / _renderingContext->drawableSize().y);
 }
 
-- (IBAction)clear:(NSButton *)sender {
-    NSLog(@"clear");
+-(void)rightMouseUp:(NSEvent *)event {
+    if(!_polyline.isClosed() && _polyline.points().size() > 1) {
+        _polyline.close();
+    }
+}
+
+-(IBAction) subdivide:(NSButton *)sender {
+    // TODO
+}
+
+-(IBAction) clear: (NSButton *)sender {
+    _polyline.clear();
 }
 
 
@@ -78,7 +101,7 @@
 }
 
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
-    _renderingContext->setDrawableSize(simd_make_float2(size.width, size.height));
+    _renderingContext->setDrawableSize(simd::float2 {static_cast<float>(size.width), static_cast<float>(size.height)});
 }
 
 @end
