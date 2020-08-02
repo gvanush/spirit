@@ -12,25 +12,26 @@
 		B7047A9B247F978F00F18D3C /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A99247F978F00F18D3C /* Entity.cpp */; };
 		B7047A9F247F9DA200F18D3C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7047A9D247F9DA200F18D3C /* Core.cpp */; };
 		B7047AA0247F9DA200F18D3C /* Core.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B7047A9E247F9DA200F18D3C /* Core.hpp */; };
-		B7047AA624857E2400F18D3C /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7047AA524857E2400F18D3C /* Scene.mm */; };
-		B715B23624D2021B00B4C859 /* libSpirit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7671EC3244D7DC80075D52C /* libSpirit.a */; };
 		B715B23724D203F500B4C859 /* libAppleCppAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B715B23124D1FDA500B4C859 /* libAppleCppAPI.a */; };
 		B729454D24AAEBE800691DD4 /* DurerRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */; };
 		B729454E24AAEBE800691DD4 /* DurerRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */; };
-		B7568A662460823B008943BA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
-		B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED7244D85F20075D52C /* AppDelegate.swift */; };
-		B7671EDA244D85F20075D52C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7671ED9244D85F20075D52C /* ViewController.swift */; };
-		B7671EDC244D85F30075D52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDB244D85F30075D52C /* Assets.xcassets */; };
-		B7671EDF244D85F30075D52C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7671EDD244D85F30075D52C /* Main.storyboard */; };
 		B7671F42245766630075D52C /* SPRTCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7671F40245766630075D52C /* SPRTCore.mm */; };
 		B7671F472458A7620075D52C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 		B7671F492458A7BA0075D52C /* ShaderTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B7671F482458A7BA0075D52C /* ShaderTypes.h */; };
-		B7671FA6245D72910075D52C /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7671FA4245D72910075D52C /* Scene.cpp */; };
 		B78443F62469C6920098A651 /* TriangleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B78443F42469C6920098A651 /* TriangleRenderer.cpp */; };
 		B78443F72469C6920098A651 /* TriangleRenderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B78443F52469C6920098A651 /* TriangleRenderer.hpp */; };
 		B78443FA2469CA2E0098A651 /* TriangleWaveRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */; };
 		B784444E247C26D80098A651 /* SPRTRenderingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B784444C247C26D80098A651 /* SPRTRenderingContext.h */; };
 		B784444F247C26D80098A651 /* RenderingContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = B784444D247C26D80098A651 /* RenderingContext.mm */; };
+		B7847AEF24D691C200026607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7847AEE24D691C200026607 /* AppDelegate.m */; };
+		B7847AF424D691C300026607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7847AF324D691C300026607 /* Assets.xcassets */; };
+		B7847AF724D691C300026607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7847AF524D691C300026607 /* Main.storyboard */; };
+		B7847AFA24D691C300026607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7847AF924D691C300026607 /* main.m */; };
+		B7847B0124D692E200026607 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7847B0024D692E200026607 /* ViewController.mm */; };
+		B7847B0224D6961000026607 /* libSpirit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7671EC3244D7DC80075D52C /* libSpirit.a */; };
+		B7847B0524D696EB00026607 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7847B0324D696EB00026607 /* MetalKit.framework */; };
+		B7847B0624D696EB00026607 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7847B0424D696EB00026607 /* Metal.framework */; };
+		B7847B0724D6A10500026607 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B7671F462458A7620075D52C /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +44,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B7568A63246078FC008943BA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		B7047A95247EF1B600F18D3C /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		B7047A96247EF1B600F18D3C /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
@@ -65,26 +54,14 @@
 		B7047AA12485735A00F18D3C /* RenderingContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RenderingContext.hpp; sourceTree = "<group>"; };
 		B7047AA22485782400F18D3C /* Spirit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Spirit.hpp; sourceTree = "<group>"; };
 		B7047AA3248578DE00F18D3C /* Spirit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spirit.h; sourceTree = "<group>"; };
-		B7047AA424857E2400F18D3C /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		B7047AA524857E2400F18D3C /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
 		B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppleCppAPI.xcodeproj; path = ../AppleCppAPI/AppleCppAPI.xcodeproj; sourceTree = "<group>"; };
 		B729454B24AAEBE800691DD4 /* DurerRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DurerRenderer.cpp; sourceTree = "<group>"; };
 		B729454C24AAEBE800691DD4 /* DurerRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DurerRenderer.hpp; sourceTree = "<group>"; };
 		B7671EC3244D7DC80075D52C /* libSpirit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpirit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7671ED5244D85F20075D52C /* Spirit_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirit_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7671ED7244D85F20075D52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7671ED9244D85F20075D52C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B7671EDB244D85F30075D52C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7671EDE244D85F30075D52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B7671EE0244D85F30075D52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spirit_macOS.entitlements; sourceTree = "<group>"; };
-		B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spirit_macOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7671F3F245766630075D52C /* SPRTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTCore.h; sourceTree = "<group>"; };
 		B7671F40245766630075D52C /* SPRTCore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SPRTCore.mm; sourceTree = "<group>"; };
 		B7671F462458A7620075D52C /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		B7671F482458A7BA0075D52C /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
-		B7671FA4245D72910075D52C /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		B7671FA5245D72910075D52C /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		B78443F42469C6920098A651 /* TriangleRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleRenderer.cpp; sourceTree = "<group>"; };
 		B78443F52469C6920098A651 /* TriangleRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TriangleRenderer.hpp; sourceTree = "<group>"; };
 		B78443F82469CA2E0098A651 /* TriangleWaveRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleWaveRenderer.cpp; sourceTree = "<group>"; };
@@ -92,6 +69,18 @@
 		B7844449247B0C430098A651 /* Semaphore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Semaphore.hpp; sourceTree = "<group>"; };
 		B784444C247C26D80098A651 /* SPRTRenderingContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRTRenderingContext.h; sourceTree = "<group>"; };
 		B784444D247C26D80098A651 /* RenderingContext.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderingContext.mm; sourceTree = "<group>"; };
+		B7847AEB24D691C100026607 /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7847AED24D691C200026607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7847AEE24D691C200026607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7847AF024D691C200026607 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B7847AF324D691C300026607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7847AF624D691C300026607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7847AF824D691C300026607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7847AF924D691C300026607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7847AFB24D691C300026607 /* TestBed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestBed.entitlements; sourceTree = "<group>"; };
+		B7847B0024D692E200026607 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		B7847B0324D696EB00026607 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		B7847B0424D696EB00026607 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +92,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7671ED2244D85F20075D52C /* Frameworks */ = {
+		B7847AE824D691C100026607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B715B23624D2021B00B4C859 /* libSpirit.a in Frameworks */,
+				B7847B0524D696EB00026607 /* MetalKit.framework in Frameworks */,
+				B7847B0624D696EB00026607 /* Metal.framework in Frameworks */,
+				B7847B0224D6961000026607 /* libSpirit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +149,7 @@
 			children = (
 				B715B22C24D1FDA500B4C859 /* AppleCppAPI.xcodeproj */,
 				B7671EC5244D7DC90075D52C /* Spirit */,
-				B7671ED6244D85F20075D52C /* Spirit_macOS */,
+				B7847AEC24D691C200026607 /* TestBed */,
 				B7671EC4244D7DC80075D52C /* Products */,
 				B7671EF92450D2990075D52C /* Frameworks */,
 			);
@@ -168,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B7671EC3244D7DC80075D52C /* libSpirit.a */,
-				B7671ED5244D85F20075D52C /* Spirit_macOS.app */,
+				B7847AEB24D691C100026607 /* TestBed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,27 +172,11 @@
 			path = Spirit;
 			sourceTree = "<group>";
 		};
-		B7671ED6244D85F20075D52C /* Spirit_macOS */ = {
-			isa = PBXGroup;
-			children = (
-				B7671ED7244D85F20075D52C /* AppDelegate.swift */,
-				B7671ED9244D85F20075D52C /* ViewController.swift */,
-				B7671EDB244D85F30075D52C /* Assets.xcassets */,
-				B7671EDD244D85F30075D52C /* Main.storyboard */,
-				B7671EE0244D85F30075D52C /* Info.plist */,
-				B7671EE1244D85F30075D52C /* Spirit_macOS.entitlements */,
-				B7671EF52450D1950075D52C /* Spirit_macOS-Bridging-Header.h */,
-				B7047AA424857E2400F18D3C /* Scene.h */,
-				B7047AA524857E2400F18D3C /* Scene.mm */,
-				B7671FA4245D72910075D52C /* Scene.cpp */,
-				B7671FA5245D72910075D52C /* Scene.hpp */,
-			);
-			path = Spirit_macOS;
-			sourceTree = "<group>";
-		};
 		B7671EF92450D2990075D52C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7847B0424D696EB00026607 /* Metal.framework */,
+				B7847B0324D696EB00026607 /* MetalKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,6 +201,22 @@
 				B7844449247B0C430098A651 /* Semaphore.hpp */,
 			);
 			path = _internal;
+			sourceTree = "<group>";
+		};
+		B7847AEC24D691C200026607 /* TestBed */ = {
+			isa = PBXGroup;
+			children = (
+				B7847AED24D691C200026607 /* AppDelegate.h */,
+				B7847AEE24D691C200026607 /* AppDelegate.m */,
+				B7847AF024D691C200026607 /* ViewController.h */,
+				B7847B0024D692E200026607 /* ViewController.mm */,
+				B7847AF324D691C300026607 /* Assets.xcassets */,
+				B7847AF524D691C300026607 /* Main.storyboard */,
+				B7847AF824D691C300026607 /* Info.plist */,
+				B7847AF924D691C300026607 /* main.m */,
+				B7847AFB24D691C300026607 /* TestBed.entitlements */,
+			);
+			path = TestBed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,22 +255,21 @@
 			productReference = B7671EC3244D7DC80075D52C /* libSpirit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B7671ED4244D85F20075D52C /* Spirit_macOS */ = {
+		B7847AEA24D691C100026607 /* TestBed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7671EE2244D85F30075D52C /* Build configuration list for PBXNativeTarget "Spirit_macOS" */;
+			buildConfigurationList = B7847AFF24D691C300026607 /* Build configuration list for PBXNativeTarget "TestBed" */;
 			buildPhases = (
-				B7671ED1244D85F20075D52C /* Sources */,
-				B7671ED2244D85F20075D52C /* Frameworks */,
-				B7671ED3244D85F20075D52C /* Resources */,
-				B7568A63246078FC008943BA /* CopyFiles */,
+				B7847AE724D691C100026607 /* Sources */,
+				B7847AE824D691C100026607 /* Frameworks */,
+				B7847AE924D691C100026607 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Spirit_macOS;
-			productName = Spirit_macOS;
-			productReference = B7671ED5244D85F20075D52C /* Spirit_macOS.app */;
+			name = TestBed;
+			productName = TestBed;
+			productReference = B7847AEB24D691C100026607 /* TestBed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -295,9 +285,8 @@
 					B7671EC2244D7DC80075D52C = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
-					B7671ED4244D85F20075D52C = {
-						CreatedOnToolsVersion = 11.4.1;
-						LastSwiftMigration = 1140;
+					B7847AEA24D691C100026607 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -321,7 +310,7 @@
 			projectRoot = "";
 			targets = (
 				B7671EC2244D7DC80075D52C /* Spirit */,
-				B7671ED4244D85F20075D52C /* Spirit_macOS */,
+				B7847AEA24D691C100026607 /* TestBed */,
 			);
 		};
 /* End PBXProject section */
@@ -337,12 +326,12 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B7671ED3244D85F20075D52C /* Resources */ = {
+		B7847AE924D691C100026607 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7671EDC244D85F30075D52C /* Assets.xcassets in Resources */,
-				B7671EDF244D85F30075D52C /* Main.storyboard in Resources */,
+				B7847AF424D691C300026607 /* Assets.xcassets in Resources */,
+				B7847AF724D691C300026607 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,25 +354,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7671ED1244D85F20075D52C /* Sources */ = {
+		B7847AE724D691C100026607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7568A662460823B008943BA /* Shaders.metal in Sources */,
-				B7671FA6245D72910075D52C /* Scene.cpp in Sources */,
-				B7671EDA244D85F20075D52C /* ViewController.swift in Sources */,
-				B7671ED8244D85F20075D52C /* AppDelegate.swift in Sources */,
-				B7047AA624857E2400F18D3C /* Scene.mm in Sources */,
+				B7847B0724D6A10500026607 /* Shaders.metal in Sources */,
+				B7847AFA24D691C300026607 /* main.m in Sources */,
+				B7847AEF24D691C200026607 /* AppDelegate.m in Sources */,
+				B7847B0124D692E200026607 /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7671EDD244D85F30075D52C /* Main.storyboard */ = {
+		B7847AF524D691C300026607 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7671EDE244D85F30075D52C /* Base */,
+				B7847AF624D691C300026607 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -538,65 +526,57 @@
 			};
 			name = Release;
 		};
-		B7671EE3244D85F30075D52C /* Debug */ = {
+		B7847AFC24D691C300026607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = TestBed/TestBed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Spirit_macOS/Info.plist;
+				INFOPLIST_FILE = TestBed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herospirit.Spirit-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = self.learn.TestBed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../AppleCppAPI/AppleCppAPI",
 					"$(PROJECT_DIR)/Spirit",
 				);
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		B7671EE4244D85F30075D52C /* Release */ = {
+		B7847AFD24D691C300026607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_ENTITLEMENTS = Spirit_macOS/Spirit_macOS.entitlements;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = TestBed/TestBed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M369BC24W9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Spirit_macOS/Info.plist;
+				INFOPLIST_FILE = TestBed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herospirit.Spirit-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = self.learn.TestBed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "Spirit_macOS/Spirit_macOS-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../AppleCppAPI/AppleCppAPI",
 					"$(PROJECT_DIR)/Spirit",
 				);
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
@@ -621,11 +601,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7671EE2244D85F30075D52C /* Build configuration list for PBXNativeTarget "Spirit_macOS" */ = {
+		B7847AFF24D691C300026607 /* Build configuration list for PBXNativeTarget "TestBed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7671EE3244D85F30075D52C /* Debug */,
-				B7671EE4244D85F30075D52C /* Release */,
+				B7847AFC24D691C300026607 /* Debug */,
+				B7847AFD24D691C300026607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

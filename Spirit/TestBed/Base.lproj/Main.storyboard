@@ -12,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Spirit_macOS" id="1Xt-HY-uBw">
+                            <menuItem title="TestBed" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Spirit_macOS" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="TestBed" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Spirit_macOS" id="5kV-Vb-QxS">
+                                        <menuItem title="About TestBed" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Spirit_macOS" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide TestBed" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Spirit_macOS" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit TestBed" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -661,7 +661,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Spirit_macOS Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="TestBed Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -675,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Spirit_macOS" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,7 +689,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -705,39 +705,39 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Spirit_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-6I-lXq">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gZu-8O-fQe">
                                 <rect key="frame" x="14" y="222" width="101" height="32"/>
-                                <buttonCell key="cell" type="push" title="Subdivide" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K8y-6J-sdu">
+                                <buttonCell key="cell" type="push" title="Subdivide" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LI0-Pb-d7k">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="onSubdivideClicked:" target="XfG-lQ-9wD" id="UuF-fs-lmJ"/>
+                                    <action selector="subdivide:" target="XfG-lQ-9wD" id="dga-Ok-jAd"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8vj-EC-w1e">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X3l-fN-X2o">
                                 <rect key="frame" x="14" y="189" width="72" height="32"/>
-                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="86o-bt-p49">
+                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HJM-Ld-ghe">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="onClearClicked:" target="XfG-lQ-9wD" id="6Ug-Tk-5SX"/>
+                                    <action selector="clear:" target="XfG-lQ-9wD" id="n6X-LR-3Do"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8vj-EC-w1e" secondAttribute="trailing" constant="20" symbolic="YES" id="HqU-hc-B8d"/>
-                            <constraint firstItem="8vj-EC-w1e" firstAttribute="top" secondItem="Bj4-6I-lXq" secondAttribute="bottom" constant="12" symbolic="YES" id="SA2-8P-Aox"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bj4-6I-lXq" secondAttribute="trailing" constant="20" symbolic="YES" id="Xy0-6K-feH"/>
-                            <constraint firstItem="Bj4-6I-lXq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="ij0-Je-dUJ"/>
-                            <constraint firstItem="8vj-EC-w1e" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ved-3d-wAv"/>
-                            <constraint firstItem="Bj4-6I-lXq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="yhc-bH-mtF"/>
+                            <constraint firstItem="gZu-8O-fQe" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="74f-vz-euN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X3l-fN-X2o" secondAttribute="trailing" constant="20" symbolic="YES" id="BzF-ZJ-7fy"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gZu-8O-fQe" secondAttribute="trailing" constant="20" symbolic="YES" id="GQM-3T-QaG"/>
+                            <constraint firstItem="gZu-8O-fQe" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Xa7-Qz-cj3"/>
+                            <constraint firstItem="X3l-fN-X2o" firstAttribute="top" secondItem="gZu-8O-fQe" secondAttribute="bottom" constant="12" symbolic="YES" id="gQL-Kb-MnV"/>
+                            <constraint firstItem="X3l-fN-X2o" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="sI3-Jm-drU"/>
                         </constraints>
                     </view>
                 </viewController>
