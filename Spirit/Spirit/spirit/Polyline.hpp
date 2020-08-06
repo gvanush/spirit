@@ -29,6 +29,8 @@ public:
     void subdivide();
     
 private:
+    void subdividePoint(const PointType& point, const PointType& prevPoint, const PointType& nextPoint, std::vector<PointType>& points);
+    
     std::vector<PointType> _points;
     bool _closed = false;
 };

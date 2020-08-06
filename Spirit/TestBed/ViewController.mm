@@ -76,7 +76,7 @@
 }
 
 -(IBAction) subdivide:(NSButton *)sender {
-    // TODO
+    _polyline.subdivide();
 }
 
 -(IBAction) clear: (NSButton *)sender {
